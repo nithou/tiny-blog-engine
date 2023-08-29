@@ -16,5 +16,5 @@
 
     $DARK_BACKGROUND = '#1E4147'; // Background for dark mode
     $DARK_TEXT = '#FAE3B4'; // Color of the text for dark mode
-    $LIGHT_LINKS = '#AAC789'; // Color of the links when hovering for dark mode
+    $DARK_LINKS = '#AAC789'; // Color of the links when hovering for dark mode
 ?>

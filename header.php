@@ -52,6 +52,7 @@
     <link rel="webmention" href="<?php echo $WEBMENTIONS; ?>" /> 
     <link rel="pingback" href="<?php echo $PINGBACK; ?>" />
         
+    <link rel="stylesheet" href="<?php echo $BLOG_LINK; ?>assets/css/normalize.min.css">
     <style>
     :root {
         --light-bg: <?php echo $LIGHT_BACKGROUND; ?>;

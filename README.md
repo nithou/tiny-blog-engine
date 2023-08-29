@@ -7,7 +7,7 @@ A very small blog engine that allows extensive modification.
 - You just need an **FTP access**
 - Support **Webmention.io**
 - **RSS2** support
-- **GDPR** compliant (as it uses no external dependency)
+- **GDPR** compliant (as it uses no external dependencies)
 
 ![Example of the system with dark & light mode](https://github.com/nithou/tiny-blog-engine/blob/main/assets/img/og.png)
 

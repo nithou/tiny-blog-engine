@@ -12,7 +12,7 @@
 		$path_parts = pathinfo($page);
 		$filename = $path_parts['filename'];
 		$propername = str_replace('-', ' ', $filename);
-		echo '<a href="./page.php?id='.$filename.'">'.$propername.'</a><br/>';
+		echo '<a href="./page.php?id='.$filename.'">'.$propername.'</a>';
 	}
 	;?>
 	</div>

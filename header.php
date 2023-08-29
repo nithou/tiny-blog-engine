@@ -61,6 +61,8 @@
         --dark-bg: <?php echo $DARK_BACKGROUND; ?>;
         --dark-primary: <?php echo $DARK_TEXT; ?>;
         --dark-links: <?php echo $DARK_LINKS; ?>;
+        --titles-font: <?php echo $TITLES; ?>;
+        --texts-font: <?php echo $TEXTS; ?>;
     }
     </style>
     <link rel="stylesheet" href="<?php echo $BLOG_LINK; ?>assets/css/style.css">

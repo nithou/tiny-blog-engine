@@ -11,16 +11,22 @@ A very small blog engine that allows extensive modification.
 ![Example of the system with dark & light mode](https://github.com/nithou/tiny-blog-engine/blob/main/assets/img/og.png)
 
 ## How to install it?
-Duplicate this repository and edit the **config.php** file with your variables (everything is commented). Don't forget to set the blog link to the final URL of your blog
-
-In the /assets/img folder, change the **icon.png** file to your favicon, and the **og.png** file by the wide-size image (1200x630) that you want to be displayed when you share a link from your blog
-
-- Edit the config.php
+- Duplicate this repository
+- Edit the config.php (don't forget to set the blog link to the final URL of your blog)
 - Replace /assets/img/icon.png
 - Replace /assets/img/og.png
+- Upload on your FTP
 
 ## How to write posts?
-Create a markdown file in the format "YYYY-MM-DD" (2023-09-27) and drop it in the /posts folder, the website will display it automatically. Start your file with any title you want (# Title) then fly, you're free!
+- Create a **Mardown file** in the format **YYYY-MM.DD.md** (2023-09-27)
+- Start with a title like # Hello World
+- Write as you want
+- Upload the files to the **/posts** folder
+- It's online!
 
 ## How to write pages?
-Create a markdown file named as you want by replacing spaces by dashes (About Me --> About-me) and drop it in the /pages folder
+- Create a **Mardown file** named as you want, replace the spaces by dashes (About Me --> About-me.md)
+- Start with a title like # Hello World
+- Write as you want
+- Upload the files to the **/pages** folder
+- It's added to the navigation!

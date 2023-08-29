@@ -14,9 +14,9 @@ You can see a [running example here](https://nithou.net/sandbox/) or a modified 
 
 ## How to install it?
 - Duplicate this repository
-- Edit the config.php (don't forget to set the blog link to the final URL of your blog)
-- Replace /assets/img/icon.png
-- Replace /assets/img/og.png
+- Edit the **config.php** (don't forget to set the blog link to the final URL of your blog)
+- Replace /assets/img/**icon.png**
+- Replace /assets/img/**og.png**
 - Upload on your FTP
 
 ## How to write posts?

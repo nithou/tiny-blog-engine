@@ -10,6 +10,8 @@ A very small blog engine that allows extensive modification.
 
 ![Example of the system with dark & light mode](https://github.com/nithou/tiny-blog-engine/blob/main/assets/img/og.png)
 
+You can see a [running example here](https://nithou.net/sandbox/) or a modified version on [my personal blog](https://nithou.net/blog/)
+
 ## How to install it?
 - Duplicate this repository
 - Edit the config.php (don't forget to set the blog link to the final URL of your blog)

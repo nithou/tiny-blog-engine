@@ -1,12 +1,14 @@
 # Tiny Blog Engine
 A very small blog engine that allows extensive modification.
 
-- *Lightweight* : 400kb
-- *Dark & light mode* natively
-- Allows *color customisation* easily
-- You just need an *FTP access*
-- Support *webmentions*
-- *RSS* support
+- **Lightweight** : 400kb
+- **Dark & light mode** natively
+- Allows **color customisation** easily
+- You just need an **FTP access**
+- Support **Webmention.io**
+- **RSS2** support
+
+![Example of the system with dark & light mode](https://github.com/nithou/tiny-blog-engine/blob/main/assets/img/og.png)
 
 ## How to install it?
 Duplicate this repository and edit the *config.php* file with your variables (everything is commented). Don't forget to set the blog link to the final URL of your blog

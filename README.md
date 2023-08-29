@@ -18,11 +18,13 @@ A very small blog engine that allows extensive modification.
 - Upload on your FTP
 
 ## How to write posts?
-- Create a **Mardown file** in the format **YYYY-MM.DD.md** (2023-09-27)
+- Create a **Mardown file** in the format **YYYY-MM.DD.md** (2023-09-27.md)
 - Start with a title like # Hello World
 - Write as you want
 - Upload the files to the **/posts** folder
 - It's online!
+
+The blog displays the last post first then all the others
 
 ## How to write pages?
 - Create a **Mardown file** named as you want, replace the spaces by dashes (About Me --> About-me.md)

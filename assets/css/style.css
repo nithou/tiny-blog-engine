@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Helvetica Neue', 'Arial Nova', Helvetica, 'Liberation Sans', 'Roboto', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'Mplus 1p', 'Hiragino Sans', 'Hiragino Kaku Gothic Pro', '游ゴシック' , '游ゴシック体' , YuGothic , 'Yu Gothic', 'ＭＳ ゴシック' , 'MS Gothic', system-ui, sans-serif;
+  display: grid;
+  justify-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  color: var(--light-primary);
+  background-color: var(--light-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "diga";
+  font-variant-ligatures: "discretionary-ligatures";
+}
+
+::selection {
+  background-color: hsla(355, 100%, 91%, 0.3);
+}
+
+header {
+  max-width:95%;
+  margin:auto;
+}
+
+header h1 {
+  font-family: 'Helvetica Neue', 'Arial Nova', Helvetica, 'Liberation Sans', 'Roboto', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'Mplus 1p', 'Hiragino Sans', 'Hiragino Kaku Gothic Pro', '游ゴシック' , '游ゴシック体' , YuGothic , 'Yu Gothic', 'ＭＳ ゴシック' , 'MS Gothic', system-ui, sans-serif;
+  font-variant-ligatures: normal;
+  color: var(--light-primary);
+  font-size: 2rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+header h2 {
+  font-size: 1.3rem;
+  font-family: 'Helvetica Neue', 'Arial Nova', Helvetica, 'Liberation Sans', 'Roboto', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'Mplus 1p', 'Hiragino Sans', 'Hiragino Kaku Gothic Pro', '游ゴシック' , '游ゴシック体' , YuGothic , 'Yu Gothic', 'ＭＳ ゴシック' , 'MS Gothic', system-ui, sans-serif;
+  color: var(--light-primary);
+  margin: 0 0 1rem 0;
+  text-align: center;
+  font-weight: 400;
+}
+
+a {
+  position: relative;
+  color: inherit;
+  transition: color 0.5s ease-in;
+}
+
+a:hover {
+  color:var(--light-links);
+}
+
+p {
+  padding: 0rem 0;
+  text-align: left;
+}
+
+main {
+  max-width:90%;
+  margin:auto;
+  max-width:90%;
+}
+
+nav {
+  display: block;
+  text-align:center;
+  font-size: 0.85rem;
+}
+
+nav > span {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  opacity: 0.5;
+  transition: opacity 0.7s ease-in;
+}
+
+nav a:hover,
+nav a:active {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+nav .block {
+  margin:1em 0;
+  display:inline-block;
+  padding:0 1rem;
+}
+
+nav a.network {
+  opacity: 0.5;
+  padding:0 0.2em;
+}
+
+nav a.network:hover {
+  margin-top:1em;
+  opacity: 1;
+  text-decoration: none;
+}
+
+nav a.network .icon {
+  fill:var(--light-primary);
+}
+
+nav a.network:hover .icon {
+  fill:var(--light-links);
+}
+
+article {
+  font-size: 1rem;
+  max-width: 50ch;
+  margin-bottom: 3rem;
+  text-align: justify;
+  scroll-margin-top: 5rem;
+}
+
+article h1 {
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 2rem;
+  text-align: left;
+  font-family: 'Helvetica Neue', 'Arial Nova', Helvetica, 'Liberation Sans', 'Roboto', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'Mplus 1p', 'Hiragino Sans', 'Hiragino Kaku Gothic Pro', '游ゴシック' , '游ゴシック体' , YuGothic , 'Yu Gothic', 'ＭＳ ゴシック' , 'MS Gothic', system-ui, sans-serif;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+article a.permalink {
+  display: inline-block;
+  margin-bottom: 2rem;
+  pointer-events: all;
+}
+
+article p {
+  line-height:1.5em;
+}
+
+/* Webmentions */
+
+#webmentions {
+  padding:0.8rem 0.8rem 0 0.8rem;
+  max-width: 50ch;
+}
+
+#webmentions h2 {
+    font-size: 0.90rem;
+    display: block;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    font-variant: small-caps;
+    font-family: 'Helvetica Neue', 'Arial Nova', Helvetica, 'Liberation Sans', 'Roboto', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'Mplus 1p', 'Hiragino Sans', 'Hiragino Kaku Gothic Pro', '游ゴシック' , '游ゴシック体' , YuGothic , 'Yu Gothic', 'ＭＳ ゴシック' , 'MS Gothic', system-ui, sans-serif;
+    font-style: normal;
+}
+
+#webmentions ul {
+  list-style:none;
+  margin-left:0;
+  padding-left:0;
+}
+
+#webmentions ul.comments li {
+    display: block;
+    min-height: 3em;
+    margin-bottom: 1em;
+}
+
+#webmentions li a img {
+    display: block;
+    float: left;
+    height: 3em;
+    border-radius: 100%;
+    margin-right: 1em;
+}
+
+#webmentions ul.reacts a {
+  width:3em;
+  height:3em;
+  overflow:hidden;
+  display: inline-block;
+  margin-right:1em;
+  border-radius:100%;
+}
+
+#webmentions ul.reacts a img {
+  width:100%;
+  height:100%;
+}
+
+@media (prefers-color-scheme: dark)
+{
+    body {
+        color: var(--dark-primary);
+        background-color: var(--dark-bg);
+    }
+
+    a:hover {
+      color:var(--dark-links);
+    }
+
+    nav a.network .icon {
+      fill:var(--dark-links);
+    }
+
+    header h2, header h1 {color:var(--dark-primary);}
+
+    nav a.network .icon {
+      fill: var(--dark-primary);
+    }
+
+    article h1 {
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+}

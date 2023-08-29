@@ -1,7 +1,7 @@
 # Tiny Blog Engine
 A very small blog engine that allows extensive modification.
 
-- **Lightweight** : 400kb
+- **Lightweight** : 210kb
 - **Dark & light mode** natively
 - Allows **color customisation** easily
 - You just need an **FTP access**

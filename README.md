@@ -20,6 +20,8 @@ You can see a [running example here](https://nithou.net/sandbox/) or a modified 
 - Replace /assets/img/**og.png**
 - Upload on your FTP
 
+If you want to add custom CSS here, edit the file **/assets/css/custom.css**
+
 ## How to write posts?
 - Create a **Mardown file** in the format **YYYY-MM.DD.md** (2023-09-27.md)
 - Start with a title like # Hello World

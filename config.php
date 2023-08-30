@@ -1,5 +1,5 @@
 <?php
-    $BLOG_LINK = 'https://example.com/'; // Replace by your URL
+    $BLOG_LINK = dirname($_SERVER['PHP_SELF']).'/'; // If this doesn"t work, replace by the directory of your blog ending by a / like: https://example.com/
     $BLOG_TITLE = 'The Title'; // Replace by your blog title
     $BLOG_TAGLINE = 'your blog tagline, goes after the title'; // Replace by your blog tagline or leave empty
     $BLOG_DESCRIPTION = 'your blog description'; // Will be shown when sharing links from your blog

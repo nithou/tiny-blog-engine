@@ -1,6 +1,6 @@
 <nav>
 
-	<a href="./index.php">home</a>
+	<a href="./index.php"><?php echo $HOME; ?></a>
 	
 	<div class="block">
 	<?php 

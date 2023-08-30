@@ -10,7 +10,7 @@
           $Parsedown = new ParsedownExtra();
           echo '<article>';
           echo $Parsedown->text($post);
-          echo '<a href="single.php?id='.$link_id.'">direct link</a>';
+          echo '<a href="single.php?id='.$link_id.'">'.$LINKTO.'</a>';
           echo '</article>';
 
         }

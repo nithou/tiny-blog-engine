@@ -7,7 +7,7 @@
    $Parsedown = new ParsedownExtra();
    echo '<article>';
    echo $Parsedown->text($html);
-   echo '&#8249; <a href="'.$BLOG_LINK.'">back to the list</a>';
+   echo '&#8249; <a href="'.$BLOG_LINK.'">'.$BACKTO.'</a>';
    echo '</article>';
 ?>
 

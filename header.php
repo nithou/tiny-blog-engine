@@ -1,5 +1,6 @@
+<?php include('config.php');?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo $LANG; ?>">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,7 +8,6 @@
 
     <?php include('assets/tools/parsedown.php');?>
     <?php include('assets/tools/ParsedownExtra.php');?>
-    <?php include('config.php');?>
     
     <?php if (stripos($_SERVER['REQUEST_URI'], 'single.php'))
     {

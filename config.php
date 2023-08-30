@@ -3,6 +3,12 @@
     $BLOG_TITLE = 'The Title'; // Replace by your blog title
     $BLOG_TAGLINE = 'your blog tagline, goes after the title'; // Replace by your blog tagline or leave empty
     $BLOG_DESCRIPTION = 'your blog description'; // Will be shown when sharing links from your blog
+    $LANG = 'en'; // Two code language of your blog lang
+
+    // For the lil' texts
+    $LINKTO = 'direct link'; // Displayed at the bottom of the posts
+    $BACKTO = 'back to the list'; // Displayed when on a post or page 
+    $HOME = 'home'; // Back to the home
 
     // Mainly used for RSS
     $BLOG_AUTHOR = 'your name'; // Your name or nickname

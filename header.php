@@ -67,6 +67,7 @@
     }
     </style>
     <link rel="stylesheet" href="<?php echo $BLOG_LINK; ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo $BLOG_LINK; ?>assets/css/custom.css">
 
   </head>
 

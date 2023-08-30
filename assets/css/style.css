@@ -139,6 +139,7 @@ nav a.network:hover {
 
 nav a.network .icon {
   fill:var(--light-primary);
+  transition: fill 0.5s ease-in;
 }
 
 nav a.network:hover .icon {

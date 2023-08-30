@@ -1,5 +1,5 @@
 <?php
-    $BLOG_LINK = 'https//example.com'; // Replace by your URL
+    $BLOG_LINK = 'https://example.com/'; // Replace by your URL
     $BLOG_TITLE = 'The Title'; // Replace by your blog title
     $BLOG_TAGLINE = 'your blog tagline, goes after the title'; // Replace by your blog tagline or leave empty
     $BLOG_DESCRIPTION = 'your blog description'; // Will be shown when sharing links from your blog
@@ -31,5 +31,5 @@
 
     // Here you can change how titles & texts look see https://developer.mozilla.org/en-US/docs/Web/CSS/font-family
     $TITLES = '"Helvetica Neue", "Arial Nova", Helvetica, "Liberation Sans", "Roboto", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Mplus 1p", "Hiragino Sans", "Hiragino Kaku Gothic Pro", "游ゴシック" , "游ゴシック体" , YuGothic , "Yu Gothic", "ＭＳ ゴシック" , "MS Gothic", system-ui, sans-serif'; // Default fonts for the titles
-    $TEXTS = '"Helvetica Neue", "Arial Nova", Helvetica, "Liberation Sans", "Roboto", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Mplus 1p", "Hiragino Sans", "Hiragino Kaku Gothic Pro", "游ゴシック" , "游ゴシック体" , YuGothic , "Yu Gothic", "ＭＳ ゴシック" , "MS Gothic", system-ui, sans-serif'; // Default fonts for the texts
+    $TEXTS = 'Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Mplus 1p", "Hiragino Sans", "Hiragino Kaku Gothic Pro", "游ゴシック" , "游ゴシック体" , YuGothic , "Yu Gothic", "ＭＳ ゴシック" , "MS Gothic", serif'; // Default fonts for the texts
 ?>

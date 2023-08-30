@@ -7,7 +7,7 @@
         foreach($files as $post) {
           $link_id = basename($post , ".md");
           $post = file_get_contents($post);
-          $Parsedown = new Parsedown();
+          $Parsedown = new ParsedownExtra();
           echo '<article>';
           echo $Parsedown->text($post);
           echo '<a href="single.php?id='.$link_id.'">direct link</a>';

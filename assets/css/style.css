@@ -81,8 +81,24 @@ main {
   max-width:90%;
 }
 
-main img, main iframe, main table {
+main img, main iframe, main table, main object, main code, main pre {
   max-width: 100%;
+  display: block;
+}
+
+main pre, main code {
+  overflow-x: scroll;
+  overflow-wrap: break-word;
+}
+
+/* Display for code blocks */
+
+main pre {
+  background-color:rgba(0,0,0,0.2);
+}
+
+main pre code {
+  padding:0.4rem;
 }
 
 /* Navigation */

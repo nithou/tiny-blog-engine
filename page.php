@@ -4,7 +4,7 @@
 <div class="h-entry">
 <?php
    $html = file_get_contents('pages/'.$id.'.md');
-   $Parsedown = new Parsedown();
+   $Parsedown = new ParsedownExtra();
    echo '<article>';
    echo $Parsedown->text($html);
    echo '&#8249; <a href="'.$BLOG_LINK.'">back to the list</a>';

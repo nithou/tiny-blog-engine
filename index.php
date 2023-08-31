@@ -12,7 +12,7 @@
           $summary = implode("\n", array_slice(explode("\n", $post), 1, 3));
           $Parsedown = new ParsedownExtra();
 
-          if ($summary == true) {
+          if ($SHOW_SUMMARY === TRUE) {
             echo '<article>';
             echo '<h1>'.$title.'</h1>';
             echo $summary;
@@ -20,8 +20,7 @@
             echo '</article>';
           } else {
             echo '<article>';
-            echo '<h1>'.$title.'</h1>';
-            echo $summary;
+            echo $Parsedown->text($post);
             echo '<a href="single.php?id='.$link_id.'" class="permalink">'.$LINKTO.'</a>';
             echo '</article>';
           };

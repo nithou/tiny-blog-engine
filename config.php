@@ -29,6 +29,9 @@
     $BACKTO = 'back to the list'; // Displayed when on a post or page 
     $HOME = 'home'; // Back to the home
 
+    // Only show summary in home
+    $SUMMARY = true;
+
     // Here you can change how titles & texts look see https://developer.mozilla.org/en-US/docs/Web/CSS/font-family
     $TITLES = '"Helvetica Neue", "Arial Nova", Helvetica, "Liberation Sans", "Roboto", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Mplus 1p", "Hiragino Sans", "Hiragino Kaku Gothic Pro", "游ゴシック" , "游ゴシック体" , YuGothic , "Yu Gothic", "ＭＳ ゴシック" , "MS Gothic", system-ui, sans-serif'; // Default fonts for the titles
     $TEXTS = 'Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Mplus 1p", "Hiragino Sans", "Hiragino Kaku Gothic Pro", "游ゴシック" , "游ゴシック体" , YuGothic , "Yu Gothic", "ＭＳ ゴシック" , "MS Gothic", serif'; // Default fonts for the texts

@@ -153,6 +153,7 @@ article {
   margin-bottom: 3rem;
   text-align: justify;
   scroll-margin-top: 5rem;
+  line-height: 1.5rem;
 }
 
 article h1 {
@@ -164,9 +165,9 @@ article h1 {
 }
 
 article a.permalink {
-  display: inline-block;
-  margin-bottom: 2rem;
+  display: block;
   pointer-events: all;
+  margin:2rem 0;
 }
 
 /* Webmentions */

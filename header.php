@@ -5,6 +5,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:image" content="<?php echo $BLOG_LINK; ?>assets/img/og.png" />
+    <meta name="author" content="<?php echo $BLOG_AUTHOR; ?>">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $BLOG_LINK; ?>assets/img/icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $BLOG_LINK; ?>assets/img/icon.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $BLOG_LINK; ?>assets/img/icon.png"/>   
+    
+    <link rel="webmention" href="<?php echo $WEBMENTIONS; ?>" /> 
+    <link rel="pingback" href="<?php echo $PINGBACK; ?>" />
 
     <?php include('assets/tools/parsedown.php');?>
     <?php include('assets/tools/ParsedownExtra.php');?>
@@ -39,19 +50,6 @@
     <meta property="og:description" content="' . $BLOG_DESCRIPTION . '" />';
     }
     ?>
-    
-    <meta property="og:locale" content="en_GB" />
-    <meta property="og:image" content="<?php echo $BLOG_LINK; ?>assets/img/og.png" />
-    <meta name="author" content="<?php echo $BLOG_AUTHOR; ?>">
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $BLOG_LINK; ?>assets/img/icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $BLOG_LINK; ?>assets/img/icon.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $BLOG_LINK; ?>assets/img/icon.png"/>
-
-    <meta name="theme-color" content="#ffffff" />    
-    
-    <link rel="webmention" href="<?php echo $WEBMENTIONS; ?>" /> 
-    <link rel="pingback" href="<?php echo $PINGBACK; ?>" />
         
     <link rel="stylesheet" href="<?php echo $BLOG_LINK; ?>assets/css/normalize.min.css">
     <style>

@@ -42,6 +42,10 @@ If you have any questions, suggestions, or issues, please don't hesitate to open
 
 Happy blogging!
 
+## Problems on PHP 8 on some systems
+
+Ensure you have php8.1-xml and php8.1-mbstring installed
+
 ## License
 
 This is free and unencumbered software released into the public domain.

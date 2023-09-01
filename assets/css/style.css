@@ -34,7 +34,7 @@ p {
   line-height:1.5em;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: var(--titles-font);
 }
 
@@ -157,12 +157,20 @@ article {
   line-height: 1.5rem;
 }
 
-article h1 {
+article > h1 {
   font-size: 1.3rem;
   display: block;
   margin-bottom: 2rem;
   text-align: left;
   border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+article h2 {
+  font-size: 1.3rem;
+}
+
+article h3 {
+  font-size:1.1rem;
 }
 
 article a.permalink {

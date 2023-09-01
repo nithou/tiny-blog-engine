@@ -95,6 +95,7 @@ main pre, main code {
 
 main pre {
   background-color:rgba(0,0,0,0.2);
+  white-space: pre-wrap;
 }
 
 main pre code {

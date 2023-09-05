@@ -28,9 +28,11 @@
     $LINKTO = 'direct link'; // Displayed at the bottom of the posts
     $BACKTO = 'back to the list'; // Displayed when on a post or page 
     $HOME = 'home'; // Back to the home
+    $MOREPOSTS = 'see all posts';  // Text that links to the archive page
 
     // Only show summary in home
     $SHOW_SUMMARY = false; // Change to true if you want to only display a short summary in home
+    $POST_LIMIT = 10; // Limit the amount of posts you want to display on the homepage
 
     // Here you can change how titles & texts look see https://developer.mozilla.org/en-US/docs/Web/CSS/font-family
     $TITLES = '"Helvetica Neue", "Arial Nova", Helvetica, "Liberation Sans", "Roboto", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Mplus 1p", "Hiragino Sans", "Hiragino Kaku Gothic Pro", "游ゴシック" , "游ゴシック体" , YuGothic , "Yu Gothic", "ＭＳ ゴシック" , "MS Gothic", system-ui, sans-serif'; // Default fonts for the titles

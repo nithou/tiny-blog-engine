@@ -15,6 +15,9 @@
 </div>
 
 <a href="https://brid.gy/publish/mastodon"></a>
+<a href="https://brid.gy/publish/twitter"></a>
+<data class="p-bridgy-omit-link" value="false"></data>
+
 </section>
 
 <?php include 'parts/footer.php';?>

@@ -1,4 +1,4 @@
-<?php include 'header.php';?>
+<?php include 'parts/header.php';?>
 
 <section class="single"> <!-- article list -->
 <div class="h-entry">
@@ -17,5 +17,5 @@
 <a href="https://brid.gy/publish/mastodon"></a>
 </section>
 
-<?php include 'footer.php';?>
+<?php include 'parts/footer.php';?>
 

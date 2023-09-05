@@ -1,4 +1,4 @@
-<?php include 'header.php';?>
+<?php include 'parts/header.php';?>
 <section class="list"> <!-- article list -->
 
       <?php
@@ -29,4 +29,4 @@
       ?>
 </section>
 
-<?php include 'footer.php';?>
+<?php include 'parts/footer.php';?>

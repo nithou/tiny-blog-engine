@@ -76,4 +76,5 @@
     </header>
 
 <main class="home">
+<?php $index=false;?>
 <?php include 'nav.php';?>

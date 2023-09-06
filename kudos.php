@@ -1,7 +1,7 @@
 <?php  
   if(isset($_POST['kudos'])) {
       function getCounter($counterID) {
-         $fileName = "posts/".$counterID."-count.txt"; 
+         $fileName = "posts/kudos/".$counterID."-count.txt"; 
          if( file_exists($fileName) ) {
             list($numVisitors)=file($fileName); // Read contents from the file
          } else {
@@ -19,7 +19,7 @@
       echo '</div>';
   } else {
       function getCounter($counterID) {
-         $fileName = "posts/".$counterID."-count.txt"; 
+         $fileName = "posts/kudos/".$counterID."-count.txt"; 
          if( file_exists($fileName) ) {
             list($numVisitors)=file($fileName); // Read contents from the file
          } else {

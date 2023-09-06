@@ -17,8 +17,8 @@
     <!-- WEBMENTIONS ENABLER -->
  <?php if ($WEBMENTIONS === TRUE) {
 		echo '<script src="assets/scripts/webmention.min.js"></script>
-    			<link rel="webmention" href="<?php echo $WEBMENTIONSLINK; ?>" /> 
-    			<link rel="pingback" href="<?php echo $PINGBACK; ?>" />';
+    			<link rel="webmention" href="'.$WEBMENTIONSLINK.'" /> 
+    			<link rel="pingback" href="'.$PINGBACK.'" />';
 		} else {
 	};?>
 

@@ -285,11 +285,11 @@ article a.permalink {
 }
 
 #kudos button {
-   width: 3rem;
-   height: 3rem;
-  line-height: 3.5rem;
-  border-radius: 3rem;
-  border: 0px solid white;
+  border-radius: 100%;
+  margin: 0;
+  height: 44px;
+  width: 44px;
+  line-height:54px;
   margin: auto;
   background-color: var(--light-bg);
   border:2px solid var(--light-primary);

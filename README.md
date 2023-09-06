@@ -10,6 +10,8 @@ The Tiny Blog Engine is a lightweight and highly customizable blog engine that e
 - **RSS2 Support**: Keeps your readers updated with RSS2 feed compatibility.
 - **GDPR Compliant**: The engine respects your privacy by not relying on external dependencies.
 
+All the informations are [available on the Wiki](https://github.com/nithou/tiny-blog-engine/wiki)!
+
 ![Example showcasing dark and light mode](https://github.com/nithou/tiny-blog-engine/blob/main/assets/img/og.png)
 
 Check out a [live example here](https://nithou.net/sandbox/) or see a modified version on [my personal blog](https://nithou.net/blog/).

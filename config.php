@@ -27,6 +27,7 @@
 
     // Add Commento support
     $COMMENTO = false;
+    $COMMENTO_URL = 'https://cdn.commento.io/js/commento.js';
 
     // Add Kudos support
     $KUDOS = true;

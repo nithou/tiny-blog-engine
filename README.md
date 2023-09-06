@@ -6,7 +6,7 @@ The Tiny Blog Engine is a lightweight and highly customizable blog engine that e
 - **Dark & Light Mode**: Enjoy the convenience of built-in dark and light modes.
 - **Customization**: Easily customize the colors, fonts, language to match your preferences.
 - **Simple Deployment**: Requires only FTP access for deployment (and a server that supports PHP, should be easy to find in 2023)
-- **Webmention.io Support**: Seamlessly integrates with Webmention.io for improved interaction thanks to [this script](https://github.com/PlaidWeb/webmention.js/). You can activate it through the config file
+- **Comments & Interactions**: See below
 - **RSS2 Support**: Keeps your readers updated with RSS2 feed compatibility.
 - **GDPR Compliant**: The engine respects your privacy by not relying on external dependencies.
 
@@ -41,6 +41,14 @@ Feel free to contribute, modify, and enhance the Tiny Blog Engine to suit your b
 If you have any questions, suggestions, or issues, please don't hesitate to open an issue or reach out. 
 
 Happy blogging!
+
+## Comment & Interactions
+
+The config.php file provides different comments / reactions systems that you can decide to activate:
+
+- **Kudos**: the simplest system, it allows your user to leave a "like" on your posts without hassle. Same has the "clap" on Medium
+- **Webmention.io**: Supported thanks to [this script](https://github.com/PlaidWeb/webmention.js/) integration. You will have to provide both the webmention script & pingback script links ([see this page](https://webmention.io/settings))
+- **Commento.io**: You can enable [commento.io](commento.io/) system by providing the URL set in your administration pannel 
 
 ## Problems on PHP 8 on some systems
 

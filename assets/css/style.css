@@ -81,12 +81,14 @@ main {
   max-width:90%;
 }
 
-main img, main iframe, main table, main object, main code, main pre {
+/* Ensure fluid elements inside container */
+
+.h-entry img, .h-entry iframe, .h-entry table, .h-entry object, .h-entry code, .h-entry pre {
   max-width: 100%;
   display: block;
 }
 
-main pre, main code {
+.h-entry pre, .h-entry code {
   overflow-x: scroll;
   overflow-wrap: break-word;
 }

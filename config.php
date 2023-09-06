@@ -25,6 +25,9 @@
     $WEBMENTIONSLINK = '';
     $PINGBACK = '';
 
+    // Add Commento support
+    $COMMENTO = false;
+
     // If your blog isn't in English
     $LANG = 'en'; // Two code language of your blog lang
     $LINKTO = 'direct link'; // Displayed at the bottom of the posts

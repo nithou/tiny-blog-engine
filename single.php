@@ -14,7 +14,7 @@
    
 <!-- FULL BRID.GY FOR WEBMENTIONS SUPPORT -->
  <?php if ($WEBMENTIONS === TRUE) {
-		echo '<a href="https://brid.gy/publish/flickr" rel="webmention"></a>
+echo '<a href="https://brid.gy/publish/flickr" rel="webmention"></a>
 <a href="https://brid.gy/publish/github" rel="webmention"></a>
 <a href="https://brid.gy/publish/mastodon" rel="webmention"></a>
 <a href="https://brid.gy/publish/twitter" rel="webmention"></a>

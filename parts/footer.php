@@ -1,4 +1,3 @@
-    </section>
 </main>
 
 <?php if ($index==true)

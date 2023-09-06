@@ -11,10 +11,15 @@
    echo '</article>';
 ?>
 
+<!-- FULL BRID.GY FOR WEBMENTIONS SUPPORT -->
+<a href="https://brid.gy/publish/flickr" rel="webmention"></a>
+<a href="https://brid.gy/publish/github" rel="webmention"></a>
+<a href="https://brid.gy/publish/mastodon" rel="webmention"></a>
+<a href="https://brid.gy/publish/twitter" rel="webmention"></a>
+<data class="p-bridgy-omit-link" value="false"></data>
 <div id="webmentions"></div>
-</div>
-
-<a href="https://brid.gy/publish/mastodon"></a>
+<!-- EOF BRID.GY -->
+   
 </section>
 
 <?php include 'parts/footer.php';?>

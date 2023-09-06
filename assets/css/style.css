@@ -286,11 +286,8 @@ article a.permalink {
 
 #kudos button {
   border-radius: 100%;
-  margin: 0;
-  height: 44px;
-  width: 44px;
-  line-height:54px;
   margin: auto;
+  padding:0.5em 0.5em 0.3em 0.5em;
   background-color: var(--light-bg);
   border:2px solid var(--light-primary);
   color: var(--light-bg);

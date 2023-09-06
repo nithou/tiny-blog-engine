@@ -20,7 +20,8 @@
     $DARK_LINKS = '#AAC789'; // Color of the links when hovering for dark mode
 
     // Webmentions system to display external reactions see https://webmention.io/
-    $WEBMENTIONS = '';
+    $WEBMENTIONS = false;
+    $WEBMENTIONSLINK = '';
     $PINGBACK = '';
 
     // If your blog isn't in English

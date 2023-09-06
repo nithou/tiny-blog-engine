@@ -14,6 +14,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $BLOG_LINK; ?>assets/img/icon.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $BLOG_LINK; ?>assets/img/icon.png"/>   
 
+    <!-- WEBMENTIONS ENABLER -->
     <script src="assets/scripts/webmention.min.js"></script>
     <link rel="webmention" href="<?php echo $WEBMENTIONS; ?>" /> 
     <link rel="pingback" href="<?php echo $PINGBACK; ?>" />

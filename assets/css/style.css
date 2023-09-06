@@ -104,6 +104,24 @@ main pre code {
   padding:0.4rem;
 }
 
+/* About Block */
+
+.about-me {
+  max-width: 50ch;
+}
+
+.about-me hr {
+  color:rgba(255,255,255,0.1);
+  margin-bottom:1.5rem;
+}
+
+.about-me .author-image {
+  float: left;
+  background-color: white;
+  border-radius: 100px;
+  margin-right: 2rem;
+}
+
 /* Navigation */
 
 nav {

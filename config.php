@@ -13,14 +13,14 @@
     // General Styling
     // Here you can change the colors, some good ideas here http://a11yrocks.com/colorPalette/ and here https://www.randoma11y.com/
     // Light Mode colors
-    $LIGHT_BACKGROUND = '#FAE3B4'; // Background for light mode
-    $LIGHT_TEXT = '#1E4147'; // Color of the text for light mode
-    $LIGHT_LINKS = '#AAC789'; // Color of the links when hovering for light mode
+    $LIGHT_BACKGROUND = '#ffebd4'; // Background for light mode
+    $LIGHT_TEXT = '#0c0014'; // Color of the text for light mode
+    $LIGHT_LINKS = '#ad6f28'; // Color of the links when hovering for light mode
 
     // Dark Mode colors
-    $DARK_BACKGROUND = '#1E4147'; // Background for dark mode
-    $DARK_TEXT = '#FAE3B4'; // Color of the text for dark mode
-    $DARK_LINKS = '#AAC789'; // Color of the links when hovering for dark mode
+    $DARK_BACKGROUND = '#0c0014'; // Background for dark mode
+    $DARK_TEXT = '#ffebd4'; // Color of the text for dark mode
+    $DARK_LINKS = '#ad6f28'; // Color of the links when hovering for dark mode
 
     // Here you can change how titles & texts look see https://developer.mozilla.org/en-US/docs/Web/CSS/font-family
     $TITLES = '"Helvetica Neue", "Arial Nova", Helvetica, "Liberation Sans", "Roboto", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Mplus 1p", "Hiragino Sans", "Hiragino Kaku Gothic Pro", "游ゴシック" , "游ゴシック体" , YuGothic , "Yu Gothic", "ＭＳ ゴシック" , "MS Gothic", system-ui, sans-serif'; // Default fonts for the titles

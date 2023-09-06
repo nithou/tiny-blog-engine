@@ -1,6 +1,6 @@
 <?php include 'parts/header.php';?>
 
-<section class="single"> <!-- article list -->
+<section class="single">
 <div>
 <?php
    $html = file_get_contents('posts/'.$id.'.md');

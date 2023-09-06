@@ -30,7 +30,7 @@ echo '<a href="https://brid.gy/publish/flickr" rel="webmention"></a>
 
 <!-- ADD COMMENTO SUPPORT -->
 <?php if ($COMMENTO === TRUE) {
-echo'<script defer src="https://cdn.commento.io/js/commento.js" data-css-override="./assets/css/commento.css"></script>
+echo'<script defer src="https://cdn.commento.io/js/commento.js" data-css-override="./assets/css/commento.css" data-no-fonts=true></script>
 <div id="commento"></div>';} else {};?>
    
 </div>

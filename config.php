@@ -7,6 +7,7 @@
     // Mainly used for RSS
     $BLOG_AUTHOR = 'your name'; // Your name or nickname
     $AUTHOR_EMAIL = 'your email'; // Your email
+    $AUTHOR_DESCRIPTION = 'your description'; // Will be displayed at the bottom of the post. Upload an author.jpg into the /assets/img folder
 
     // Here you can change the colors, some good ideas here http://a11yrocks.com/colorPalette/ and here https://www.randoma11y.com/
     // Light Mode colors

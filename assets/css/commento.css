@@ -1,3 +1,7 @@
+.commento-root {
+	max-width: 50ch;
+}
+
 .commento-root .commento-submit-button {
   background: var(--light-primary);
   color:var(--light-bg);

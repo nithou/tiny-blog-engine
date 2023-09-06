@@ -1,7 +1,6 @@
 <?php include 'parts/header.php';?>
 
 <section class="single">
-<div>
 <?php
    $html = file_get_contents('posts/'.$id.'.md');
    $Parsedown = new ParsedownExtra();
@@ -34,10 +33,6 @@ echo '<a href="https://brid.gy/publish/flickr" rel="webmention"></a>
 <?php if ($COMMENTO === TRUE) {
 echo'<script defer src="https://cdn.commento.io/js/commento.js" data-css-override="./assets/css/commento.css"></script>
 <div id="commento"></div>';} else {};?>
-   
-</div>
-
-
 </section>
 
 <?php include 'parts/footer.php';?>

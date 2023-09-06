@@ -11,12 +11,17 @@
    echo '</article>';
 ?>
 
-<div id="webmentions"></div>
-</div>
-
+   
+<!-- FULL BRID.GY FOR WEBMENTIONS SUPPORT -->
+<a href="https://brid.gy/publish/flickr"></a>
+<a href="https://brid.gy/publish/github"></a>
 <a href="https://brid.gy/publish/mastodon"></a>
 <a href="https://brid.gy/publish/twitter"></a>
 <data class="p-bridgy-omit-link" value="false"></data>
+<div id="webmentions"></div>
+<!-- EOF BRID.GY -->
+</div>
+
 
 </section>
 

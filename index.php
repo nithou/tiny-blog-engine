@@ -16,12 +16,12 @@
           if ($SHOW_SUMMARY === TRUE) {
             echo '<article class="h-entry">';
             echo '<h1>'.$title.'</h1>';
-            echo $summary;
+            echo '<div class="p-summary">'.$summary.'</div>';
             echo '<a href="single.php?id='.$link_id.'" class="permalink u-url">'.$LINKTO.'</a>';
             echo '</article>';
           } else {
             echo '<article class="h-entry">';
-            echo $Parsedown->text($post);
+            echo '<div class="e-content">'.$Parsedown->text($post).'</div>';
             echo '<a href="single.php?id='.$link_id.'" class="permalink u-url">'.$LINKTO.'</a>';
             echo '</article>';
           };

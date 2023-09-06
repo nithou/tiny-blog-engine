@@ -6,7 +6,7 @@
    $html = file_get_contents('posts/'.$id.'.md');
    $Parsedown = new ParsedownExtra();
    echo '<article class="h-entry">';
-   echo $Parsedown->text($html);
+   echo '<div class="e-content">'.$Parsedown->text($html).'</div>';
    echo '&#8249; <a href="'.$BLOG_LINK.'">'.$BACKTO.'</a>';
    echo '</article>';
 ?>

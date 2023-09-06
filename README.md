@@ -6,7 +6,7 @@ The Tiny Blog Engine is a lightweight and highly customizable blog engine that e
 - **Dark & Light Mode**: Enjoy the convenience of built-in dark and light modes.
 - **Customization**: Easily customize the colors, fonts, language to match your preferences.
 - **Simple Deployment**: Requires only FTP access for deployment (and a server that supports PHP, should be easy to find in 2023)
-- **Webmention.io Support**: Seamlessly integrates with Webmention.io for improved interaction thanks to [this script](https://github.com/PlaidWeb/webmention.js/)
+- **Webmention.io Support**: Seamlessly integrates with Webmention.io for improved interaction thanks to [this script](https://github.com/PlaidWeb/webmention.js/). You can activate it through the config file
 - **RSS2 Support**: Keeps your readers updated with RSS2 feed compatibility.
 - **GDPR Compliant**: The engine respects your privacy by not relying on external dependencies.
 

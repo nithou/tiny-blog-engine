@@ -3,11 +3,28 @@
   color:var(--light-bg);
 }
 
+.commento-login-text {
+	color:var(--light-primary);
+}
+
+.commento-login-text:hover {
+	color:var(--light-links);
+}
+
 @media (prefers-color-scheme: dark)
 {
+
+	.commento-login-text {
+		color:var(--dark-primary);
+	}
+
+	.commento-login-text:hover {
+		color:var(--dark-links);
+	}
 
 	.commento-root .commento-submit-button {
 	  background: var(--dark-primary);
 	  color:var(--dark-bg);
 	}
+
 }

@@ -16,12 +16,12 @@
             echo '<article class="h-entry">';
             echo '<h1>'.$title.'</h1>';
             echo $summary;
-            echo '<a href="single.php?id='.$link_id.'" class="permalink">'.$LINKTO.'</a>';
+            echo '<a href="single.php?id='.$link_id.'" class="permalink u-url">'.$LINKTO.'</a>';
             echo '</article>';
           } else {
             echo '<article class="h-entry">';
             echo $Parsedown->text($post);
-            echo '<a href="single.php?id='.$link_id.'" class="permalink">'.$LINKTO.'</a>';
+            echo '<a href="single.php?id='.$link_id.'" class="permalink u-url">'.$LINKTO.'</a>';
             echo '</article>';
           };
         };

@@ -6,7 +6,7 @@ The Tiny Blog Engine is a lightweight and highly customizable blog engine that e
 - **Dark & Light Mode**: Enjoy the convenience of built-in dark and light modes.
 - **Customization**: Easily customize the colors, fonts, language to match your preferences.
 - **Simple Deployment**: Requires only FTP access for deployment (and a server that supports PHP, should be easy to find in 2023)
-- **Comments & Interactions**: See below
+- **Comments & Interactions**: See [below](https://github.com/nithou/tiny-blog-engine/blob/main/README.md#comment--interactions)
 - **RSS2 Support**: Keeps your readers updated with RSS2 feed compatibility.
 - **GDPR Compliant**: The engine respects your privacy by not relying on external dependencies.
 

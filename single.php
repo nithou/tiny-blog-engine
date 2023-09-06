@@ -1,11 +1,11 @@
 <?php include 'parts/header.php';?>
 
 <section class="single"> <!-- article list -->
-<div class="h-entry">
+<div>
 <?php
    $html = file_get_contents('posts/'.$id.'.md');
    $Parsedown = new ParsedownExtra();
-   echo '<article>';
+   echo '<article class="h-entry">';
    echo $Parsedown->text($html);
    echo '&#8249; <a href="'.$BLOG_LINK.'">'.$BACKTO.'</a>';
    echo '</article>';

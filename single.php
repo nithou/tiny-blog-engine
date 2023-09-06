@@ -27,6 +27,11 @@ echo '<a href="https://brid.gy/publish/flickr" rel="webmention"></a>
 <data class="p-bridgy-omit-link" value="false"></data>
 <div id="webmentions"></div>';} else {};?>
 <!-- EOF BRID.GY -->
+
+<!-- ADD COMMENTO SUPPORT -->
+<?php if ($COMMENTO === TRUE) {
+echo'<script defer src="https://cdn.commento.io/js/commento.js" data-css-override="./assets/css/commento.css"></script>
+<div id="commento"></div>';} else {};?>
    
 </div>
 

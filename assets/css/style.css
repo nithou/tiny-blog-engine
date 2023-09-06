@@ -81,6 +81,12 @@ main {
   max-width:90%;
 }
 
+/* Titles scales */
+
+.e-content > h1 {
+  font-size:1.3rem;
+}
+
 /* Ensure fluid elements inside container */
 
 .h-entry img, .h-entry iframe, .h-entry table, .h-entry object, .h-entry code, .h-entry pre {

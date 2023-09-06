@@ -1,0 +1,13 @@
+.commento-root .commento-submit-button {
+  background: var(--light-primary);
+  color:var(--light-bg);
+}
+
+@media (prefers-color-scheme: dark)
+{
+
+	.commento-root .commento-submit-button {
+	  background: var(--dark-primary);
+	  color:var(--dark-bg);
+	}
+}

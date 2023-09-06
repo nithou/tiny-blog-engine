@@ -11,6 +11,12 @@
    echo '</article>';
 ?>
 
+<div class="about-me">
+<hr>
+<img src="./assets/img/author.jpg" alt="<?php echo $BLOG_AUTHOR;?>" height="75" width="75" class="author-image"> 
+<h3 class="author-name p-author"><?php echo $BLOG_AUTHOR;?></h3>
+<p><?php echo $AUTHOR_DESCRIPTION;?></p>
+</div>
    
 <!-- FULL BRID.GY FOR WEBMENTIONS SUPPORT -->
  <?php if ($WEBMENTIONS === TRUE) {
@@ -28,4 +34,3 @@ echo '<a href="https://brid.gy/publish/flickr" rel="webmention"></a>
 </section>
 
 <?php include 'parts/footer.php';?>
-

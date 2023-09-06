@@ -114,11 +114,16 @@ main pre code {
 
 .about-me {
   max-width: 50ch;
+  display:flex;
 }
 
-.about-me hr {
+hr {
   color:rgba(255,255,255,0.1);
   margin-bottom:1.5rem;
+}
+
+.about-me {
+  margin-top:1.5rem;
 }
 
 .about-me .author-image {
@@ -126,6 +131,21 @@ main pre code {
   background-color: white;
   border-radius: 100px;
   margin-right: 2rem;
+  display:column;
+}
+
+.about-me .author-infos {
+  display: column;
+}
+
+.about-me .author-infos h3 {
+  margin-top:0;
+}
+
+.about-me .authorimage:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* Navigation */

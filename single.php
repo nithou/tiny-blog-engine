@@ -10,6 +10,9 @@
    echo '</article>';
 ?>
 
+<!-- KUDOS SYSTEM -->
+<?php include 'kudos.php';?>
+
 <hr>
 <div class="about-me">
    <img src="./assets/img/author.jpg" alt="<?php echo $BLOG_AUTHOR;?>" height="75" width="75" class="author-image"> 
@@ -18,6 +21,8 @@
       <p><?php echo $AUTHOR_DESCRIPTION;?></p>
    </div>
 </div>
+
+
    
 <!-- FULL BRID.GY FOR WEBMENTIONS SUPPORT -->
  <?php if ($WEBMENTIONS === TRUE) {

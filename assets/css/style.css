@@ -276,6 +276,58 @@ article a.permalink {
   height:100%;
 }
 
+/* Kudos */
+
+#kudos {
+   text-align:center;
+   position:relative;
+   margin:2em 0;
+}
+
+#kudos button {
+   width: 3rem;
+   height: 3rem;
+  line-height: 3.5rem;
+  border-radius: 3rem;
+  border: 0px solid white;
+  margin: auto;
+  background-color: var(--light-bg);
+  border:2px solid var(--light-primary);
+  color: var(--light-bg);
+  transition: all ease-in .25s;
+  cursor:pointer;
+}
+
+#kudos button:hover {
+  background-color:var(--light-primary)!important;
+}
+
+#kudos button:hover .heart > path {
+  stroke: var(--light-bg);   
+}
+
+.heart > path {
+  stroke: var(--light-primary);
+  stroke-width: 2;
+  fill: transparent;
+  transition: fill .25s ease-in;
+}
+
+#kudos .counter {
+   display: block;
+   position: absolute;
+   top: 0%;
+   left: 52%;
+   background-color: var(--light-primary);
+   color: var(--light-bg);
+   border: solid 1px var(--light-bg);
+   font-weight: bold;
+   height: 1.1em;
+   padding: 0.3em;
+   border-radius: 1em;
+   line-height:0.2em;
+}
+
 /* Dark Mode */
 
 @media (prefers-color-scheme: dark)
@@ -302,4 +354,28 @@ article a.permalink {
     article h1 {
       border-bottom: 1px solid rgba(255,255,255,0.1);
     }
+
+  #kudos button {
+    background-color: var(--dark-bg);
+    border:2px solid var(--dark-primary);
+    color: var(--dark-bg);
+  }
+
+  #kudos button:hover {
+    background-color:var(--dark-primary)!important;
+  }
+
+  #kudos button:hover .heart > path {
+    stroke: var(--dark-bg);   
+  }
+
+  .heart > path {
+    stroke: var(--dark-primary);
+  }
+
+  #kudos .counter {
+     background-color: var(--dark-primary);
+     color: var(--dark-bg);
+     border: solid 1px var(--dark-bg);
+  }
 }

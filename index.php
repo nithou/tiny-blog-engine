@@ -1,5 +1,5 @@
 <?php include 'parts/header.php';?>
-<section class="list"> <!-- article list -->
+<section class="list h-feed"> <!-- article list -->
 
       <?php
         $index=true;
@@ -14,13 +14,13 @@
           $Parsedown = new ParsedownExtra();
 
           if ($SHOW_SUMMARY === TRUE) {
-            echo '<article>';
+            echo '<article class="h-entry">';
             echo '<h1>'.$title.'</h1>';
             echo $summary;
             echo '<a href="single.php?id='.$link_id.'" class="permalink">'.$LINKTO.'</a>';
             echo '</article>';
           } else {
-            echo '<article>';
+            echo '<article class="h-entry">';
             echo $Parsedown->text($post);
             echo '<a href="single.php?id='.$link_id.'" class="permalink">'.$LINKTO.'</a>';
             echo '</article>';

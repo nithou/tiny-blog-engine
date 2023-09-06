@@ -14,39 +14,6 @@ The Tiny Blog Engine is a lightweight and highly customizable blog engine that e
 
 Check out a [live example here](https://nithou.net/sandbox/) or see a modified version on [my personal blog](https://nithou.net/blog/).
 
-## Installation Guide
-1. Duplicate this repository to your desired location.
-2. Edit the **[config.php](https://github.com/nithou/tiny-blog-engine/wiki/config.php)** file (Remember to set the blog link to your final blog URL).
-3. Replace the files located at /assets/img/**icon.png** and /assets/img/**og.png**.
-4. Upload the entire repository to your FTP server.
-
-For custom CSS, you can edit the file **/assets/css/custom.css**.
-
-## Writing Blog Posts
-1. Create a **Markdown file** following the format **YYYY-MM-DD.md** (e.g., 2023-09-27.md).
-2. Begin with a title using the format # Hello World.
-3. Write your content freely.
-4. Upload the markdown file to the **/posts** folder.
-5. Voilà! Your post is now live. The blog displays the latest post first, followed by older ones.
-
-## Creating Pages
-1. Create a **Markdown file** and name it as you prefer, replacing spaces with dashes (e.g., About Me becomes About-me.md).
-2. Start with a title using the format # Hello World.
-3. Fill the content as desired.
-4. Upload the markdown file to the **/pages** folder.
-5. Your new page is now seamlessly added to the navigation.
-
-Feel free to contribute, modify, and enhance the Tiny Blog Engine to suit your blogging needs!
-
-If you have any questions, suggestions, or issues, please don't hesitate to open an issue or reach out. 
-
-Happy blogging!
-
-
-## Problems on PHP 8 on some systems
-
-Ensure you have php8.1-xml and php8.1-mbstring installed
-
 ## License
 
 This is free and unencumbered software released into the public domain.

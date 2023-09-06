@@ -11,11 +11,13 @@
    echo '</article>';
 ?>
 
-<div class="about-me">
 <hr>
-<img src="./assets/img/author.jpg" alt="<?php echo $BLOG_AUTHOR;?>" height="75" width="75" class="author-image"> 
-<h3 class="author-name p-author"><?php echo $BLOG_AUTHOR;?></h3>
-<p><?php echo $AUTHOR_DESCRIPTION;?></p>
+<div class="about-me">
+   <img src="./assets/img/author.jpg" alt="<?php echo $BLOG_AUTHOR;?>" height="75" width="75" class="author-image"> 
+   <div class="author-infos">
+      <h3 class="author-name p-author"><?php echo $BLOG_AUTHOR;?></h3>
+      <p><?php echo $AUTHOR_DESCRIPTION;?></p>
+   </div>
 </div>
    
 <!-- FULL BRID.GY FOR WEBMENTIONS SUPPORT -->
@@ -30,7 +32,7 @@ echo '<a href="https://brid.gy/publish/flickr" rel="webmention"></a>
 
 <!-- ADD COMMENTO SUPPORT -->
 <?php if ($COMMENTO === TRUE) {
-echo'<script defer src="https://cdn.commento.io/js/commento.js" data-css-override="./assets/css/commento.css" data-no-fonts=true></script>
+echo'<script defer src="https://cdn.commento.io/js/commento.js" data-css-override="./assets/css/commento.css"></script>
 <div id="commento"></div>';} else {};?>
    
 </div>

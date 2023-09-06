@@ -28,6 +28,9 @@
     // Add Commento support
     $COMMENTO = false;
 
+    // Add Kudos support
+    $KUDOS = true;
+
     // If your blog isn't in English
     $LANG = 'en'; // Two code language of your blog lang
     $LINKTO = 'direct link'; // Displayed at the bottom of the posts

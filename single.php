@@ -11,8 +11,10 @@
 ?>
 
 <!-- KUDOS SYSTEM -->
-<?php include 'kudos.php';?>
+<?php if ($KUDOS === TRUE) {include './kudos.php';;} else {};?>
 
+
+<!-- AUTHOR -->
 <hr>
 <div class="about-me">
    <img src="./assets/img/author.jpg" alt="<?php echo $BLOG_AUTHOR;?>" height="75" width="75" class="author-image"> 

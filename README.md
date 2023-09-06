@@ -6,7 +6,7 @@ The Tiny Blog Engine is a lightweight and highly customizable blog engine that e
 - **Dark & Light Mode**: Enjoy the convenience of built-in dark and light modes.
 - **Customization**: Easily customize the colors, fonts, language to match your preferences.
 - **Simple Deployment**: Requires only FTP access for deployment (and a server that supports PHP, should be easy to find in 2023)
-- **Comments & Interactions**: See [below](https://github.com/nithou/tiny-blog-engine/blob/main/README.md#comment--interactions)
+- **Comments & Interactions**: See [the documentation]([https://github.com/nithou/tiny-blog-engine/blob/main/README.md#comment--interactions](https://github.com/nithou/tiny-blog-engine/wiki/Comments-&-Reactions))
 - **RSS2 Support**: Keeps your readers updated with RSS2 feed compatibility.
 - **GDPR Compliant**: The engine respects your privacy by not relying on external dependencies.
 
@@ -16,7 +16,7 @@ Check out a [live example here](https://nithou.net/sandbox/) or see a modified v
 
 ## Installation Guide
 1. Duplicate this repository to your desired location.
-2. Edit the **config.php** file (Remember to set the blog link to your final blog URL).
+2. Edit the **[config.php](https://github.com/nithou/tiny-blog-engine/wiki/config.php)** file (Remember to set the blog link to your final blog URL).
 3. Replace the files located at /assets/img/**icon.png** and /assets/img/**og.png**.
 4. Upload the entire repository to your FTP server.
 
@@ -42,13 +42,6 @@ If you have any questions, suggestions, or issues, please don't hesitate to open
 
 Happy blogging!
 
-## Comment & Interactions
-
-The config.php file provides different comments / reactions systems that you can decide to activate:
-
-- **Kudos**: the simplest system, it allows your user to leave a "like" on your posts without hassle. Same has the "clap" on Medium
-- **Webmention.io**: Supported thanks to [this script](https://github.com/PlaidWeb/webmention.js/) integration. You will have to provide both the webmention script & pingback script links ([see this page](https://webmention.io/settings))
-- **Commento.io**: You can enable [commento.io](commento.io/) system by providing the URL set in your administration pannel 
 
 ## Problems on PHP 8 on some systems
 

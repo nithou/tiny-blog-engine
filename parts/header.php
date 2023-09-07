@@ -1,83 +1,90 @@
-<?php include('config.php');?>
+<?php
+include('config.php');
+
+function getTitleAndSummary($filePath) {
+    $content = file_get_contents($filePath);
+    $lines = explode("\n", $content);
+    $title = substr($lines[0], 2); // Extract the title (assuming it starts with "## ")
+    $summary = implode("\n", array_slice($lines, 1, 2)); // Extract the first two lines as summary
+    return ['title' => $title, 'summary' => $summary];
+}
+
+$title = $BLOG_TITLE;
+$description = $BLOG_DESCRIPTION;
+
+if (stripos($_SERVER['REQUEST_URI'], 'single.php')) {
+    $id = $_GET['id'];
+    $path = 'posts/' . $id . '.md';
+    if (file_exists($path)) {
+        $data = getTitleAndSummary($path);
+        $title = $BLOG_TITLE . ' | ' . $data['title'];
+        $description = $data['summary'];
+    }
+} elseif (stripos($_SERVER['REQUEST_URI'], 'page.php')) {
+    $id = $_GET['id'];
+    $path = 'pages/' . $id . '.md';
+    if (file_exists($path)) {
+        $data = getTitleAndSummary($path);
+        $title = $BLOG_TITLE . ' | ' . $data['title'];
+        $description = $data['summary'];
+    }
+}
+
+$themeVars = [
+    '--light-bg' => $LIGHT_BACKGROUND,
+    '--light-primary' => $LIGHT_TEXT,
+    '--light-links' => $LIGHT_LINKS,
+    '--dark-bg' => $DARK_BACKGROUND,
+    '--dark-primary' => $DARK_TEXT,
+    '--dark-links' => $DARK_LINKS,
+    '--titles-font' => $TITLES,
+    '--texts-font' => $TEXTS,
+];
+?>
+
 <!DOCTYPE html>
 <html lang="<?php echo $LANG; ?>">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <meta property="og:locale" content="en_GB" />
-    <meta property="og:image" content="<?php echo $BLOG_LINK; ?>assets/img/og.png" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:locale" content="en_GB"/>
+    <meta property="og:image" content="<?php echo $BLOG_LINK; ?>assets/img/og.png"/>
     <meta name="author" content="<?php echo $BLOG_AUTHOR; ?>">
-    
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $BLOG_LINK; ?>assets/img/icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $BLOG_LINK; ?>assets/img/icon.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $BLOG_LINK; ?>assets/img/icon.png"/>   
-
-    <!-- WEBMENTIONS ENABLER -->
-<?php if ($WEBMENTIONS === TRUE) {
-echo '<script src="assets/scripts/webmention.min.js"></script>
-<link rel="webmention" href="'.$WEBMENTIONSLINK.'" /> 
-<link rel="pingback" href="'.$PINGBACK.'" />';}?>
-
-    <?php include('assets/tools/parsedown.php');?>
-    <?php include('assets/tools/ParsedownExtra.php');?>
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $BLOG_LINK; ?>assets/img/icon.png"/>
     
-    <?php if (stripos($_SERVER['REQUEST_URI'], 'single.php'))
-    {
-    $id=$_GET['id'];
-    $path = file_get_contents('posts/'.$id.'.md');
-    $summary = implode("\n", array_slice(explode("\n", $path), 1, 2));
-    $title = implode("\n", array_slice(explode("\n", $path), 0, 1));
-    $title = substr($title, 2);
-    echo '<title>' . $BLOG_TITLE . ' | ' . $title . '</title>
-    <meta name="description" content="' . $summary . '" />
-    <meta property="og:description" content="' . $summary . '" />
-    <meta property="og:title" content="' . $BLOG_TITLE . ' | ' . $title . '" />';
-    } 
-    elseif (stripos($_SERVER['REQUEST_URI'], 'page.php')) {
-    $id=$_GET['id'];
-    $path = file_get_contents('pages/'.$id.'.md');
-    $summary = implode("\n", array_slice(explode("\n", $path), 1, 2));
-    $title = implode("\n", array_slice(explode("\n", $path), 0, 1));
-    $title = substr($title, 2);
-    echo '<title>' . $BLOG_TITLE . ' | ' . $title . '</title>
-    <meta name="description" content="' . $summary . '" />
-    <meta property="og:description" content="' . $summary . '" />
-    <meta property="og:title" content="' . $BLOG_TITLE . ' | ' . $title . '" />';
-    }
-    {
-    echo '<title>' . $BLOG_TITLE . '</title>
-    <meta name="description" content="' . $BLOG_DESCRIPTION . '"/>
-    <meta property="og:title" content="' . $BLOG_TITLE . '" />
-    <meta property="og:description" content="' . $BLOG_DESCRIPTION . '" />';
-    }
-    ?>
-        
+    <?php if ($WEBMENTIONS === TRUE): ?>
+        <script src="assets/scripts/webmention.min.js"></script>
+        <link rel="webmention" href="<?php echo $WEBMENTIONSLINK; ?>"/>
+        <link rel="pingback" href="<?php echo $PINGBACK; ?>"/>
+    <?php endif; ?>
+
+    <?php include('assets/tools/parsedown.php'); ?>
+    <?php include('assets/tools/ParsedownExtra.php'); ?>
+    
+    <title><?php echo $title; ?></title>
+    <meta name="description" content="<?php echo $description; ?>"/>
+    <meta property="og:title" content="<?php echo $title; ?>"/>
+    <meta property="og:description" content="<?php echo $description; ?>"/>
+    
     <link rel="stylesheet" href="<?php echo $BLOG_LINK; ?>assets/css/normalize.min.css">
     <style>
-    :root {
-        --light-bg: <?php echo $LIGHT_BACKGROUND; ?>;
-        --light-primary: <?php echo $LIGHT_TEXT; ?>;
-        --light-links: <?php echo $LIGHT_LINKS; ?>;
-        --dark-bg: <?php echo $DARK_BACKGROUND; ?>;
-        --dark-primary: <?php echo $DARK_TEXT; ?>;
-        --dark-links: <?php echo $DARK_LINKS; ?>;
-        --titles-font: <?php echo $TITLES; ?>;
-        --texts-font: <?php echo $TEXTS; ?>;
-    }
+        :root {
+            <?php foreach ($themeVars as $varName => $varValue): ?>
+                <?php echo $varName; ?>: <?php echo $varValue; ?>;
+            <?php endforeach; ?>
+        }
     </style>
     <link rel="stylesheet" href="<?php echo $BLOG_LINK; ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo $BLOG_LINK; ?>assets/css/custom.css">
-
-  </head>
-
-  <body>
+</head>
+<body>
     <header>
         <h1><?php echo $BLOG_TITLE; ?></h1>
-	<h2><?php echo $BLOG_TAGLINE;?></h2>
+        <h2><?php echo $BLOG_TAGLINE; ?></h2>
     </header>
-
-<main class="home">
-<?php $index=false;?>
-<?php include 'nav.php';?>
+    <main class="home">
+        <?php $index = false; ?>
+        <?php include 'nav.php'; ?>

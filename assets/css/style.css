@@ -1,3 +1,5 @@
+/* Global Styles */
+
 * {
   box-sizing: border-box;
 }
@@ -10,7 +12,7 @@ html:focus-within {
   background-color: hsla(355, 100%, 91%, 0.3);
 }
 
-/* Body */
+/* Body Styles */
 
 body {
   font-family: var(--texts-font);
@@ -18,8 +20,7 @@ body {
   justify-items: center;
   min-height: 100vh;
   margin: 0;
-  padding-top: 4rem;
-  padding-bottom: 8rem;
+  padding: 4rem 0 8rem;
   color: var(--light-primary);
   background-color: var(--light-bg);
   -webkit-font-smoothing: antialiased;
@@ -29,20 +30,20 @@ body {
 }
 
 p {
-  padding: 0rem 0;
+  padding: 0;
   text-align: left;
-  line-height:1.5em;
+  line-height: 1.5em;
 }
 
 h1, h2, h3 {
   font-family: var(--titles-font);
 }
 
-/* Header */
+/* Header Styles */
 
 header {
-  max-width:95%;
-  margin:auto;
+  max-width: 95%;
+  margin: auto;
 }
 
 header h1 {
@@ -56,12 +57,12 @@ header h1 {
 header h2 {
   font-size: 1.3rem;
   color: var(--light-primary);
-  margin: 0 0 1rem 0;
+  margin: 0 0 1rem;
   text-align: center;
   font-weight: 400;
 }
 
-/* Links */
+/* Link Styles */
 
 a {
   position: relative;
@@ -70,24 +71,23 @@ a {
 }
 
 a:hover {
-  color:var(--light-links);
+  color: var(--light-links);
 }
 
-/* Main Section */
+/* Main Section Styles */
 
 main {
-  max-width:90%;
-  margin:auto;
-  max-width:90%;
+  max-width: 90%;
+  margin: auto;
 }
 
-/* Titles scales */
+/* Titles Scales */
 
 .e-content > h1 {
-  font-size:1.3rem;
+  font-size: 1.3rem;
 }
 
-/* Ensure fluid elements inside container */
+/* Ensure Fluid Elements Inside Container */
 
 .h-entry img, .h-entry iframe, .h-entry table, .h-entry object, .h-entry code, .h-entry pre {
   max-width: 100%;
@@ -99,31 +99,31 @@ main {
   overflow-wrap: break-word;
 }
 
-/* Display for code blocks */
+/* Display for Code Blocks */
 
 main pre {
-  background-color:rgba(0,0,0,0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   white-space: pre-wrap;
 }
 
 main pre code {
-  padding:0.4rem;
+  padding: 0.4rem;
 }
 
-/* About Block */
+/* About Block Styles */
 
 .about-me {
   max-width: 50ch;
-  display:flex;
+  display: flex;
 }
 
 hr {
-  color:rgba(255,255,255,0.1);
-  margin-bottom:1.5rem;
+  color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.5rem;
 }
 
 .about-me {
-  margin-top:1.5rem;
+  margin-top: 1.5rem;
 }
 
 .about-me .author-image {
@@ -131,7 +131,7 @@ hr {
   background-color: white;
   border-radius: 100px;
   margin-right: 2rem;
-  display:column;
+  display: column;
 }
 
 .about-me .author-infos {
@@ -139,20 +139,20 @@ hr {
 }
 
 .about-me .author-infos h3 {
-  margin-top:0;
+  margin-top: 0;
 }
 
-.about-me .authorimage:after {
+.about-me .author-image:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Navigation */
+/* Navigation Styles */
 
 nav {
   display: block;
-  text-align:center;
+  text-align: center;
   font-size: 1rem;
 }
 
@@ -171,12 +171,12 @@ nav a:active {
 }
 
 nav .block {
-  margin:1em 0;
-  display:inline-block;
+  margin: 1em 0;
+  display: inline-block;
 }
 
 nav a.network {
-  padding:0 0.2em;
+  padding: 0 0.2em;
 }
 
 nav a.network:hover {
@@ -184,15 +184,15 @@ nav a.network:hover {
 }
 
 nav a.network .icon {
-  fill:var(--light-primary);
+  fill: var(--light-primary);
   transition: fill 0.5s ease-in;
 }
 
 nav a.network:hover .icon {
-  fill:var(--light-links);
+  fill: var(--light-links);
 }
 
-/* Articles */
+/* Article Styles */
 
 article {
   font-size: 1rem;
@@ -208,7 +208,7 @@ article > h1 {
   display: block;
   margin-bottom: 2rem;
   text-align: left;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 article h2 {
@@ -216,154 +216,157 @@ article h2 {
 }
 
 article h3 {
-  font-size:1.1rem;
+  font-size: 1.1rem;
 }
 
 article a.permalink {
   display: block;
   pointer-events: all;
-  margin:2rem 0;
+  margin: 2rem 0;
 }
 
-/* Webmentions */
+/* Webmentions Styles */
 
 #webmentions {
-  padding:0.8rem 0.8rem 0 0.8rem;
+  padding: 0.8rem 0.8rem 0 0.8rem;
   max-width: 50ch;
 }
 
 #webmentions h2 {
-    font-size: 0.90rem;
-    display: block;
-    margin-top: 0rem;
-    margin-bottom: 2rem;
-    text-align: left;
-    font-variant: small-caps;
-    font-style: normal;
+  font-size: 0.90rem;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-align: left;
+  font-variant: small-caps;
+  font-style: normal;
 }
 
 #webmentions ul {
-  list-style:none;
-  margin-left:0;
-  padding-left:0;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 #webmentions ul.comments li {
-    display: block;
-    min-height: 3em;
-    margin-bottom: 1em;
+  display: block;
+  min-height: 3em;
+  margin-bottom: 1em;
 }
 
 #webmentions li a img {
-    display: block;
-    float: left;
-    height: 3em;
-    border-radius: 100%;
-    margin-right: 1em;
+  display: block;
+  float: left;
+  height: 3em;
+  border-radius: 100%;
+  margin-right: 1em;
 }
 
 #webmentions ul.reacts a {
-  width:3em;
-  height:3em;
-  overflow:hidden;
+  width: 3em;
+  height: 3em;
+  overflow: hidden;
   display: inline-block;
-  margin-right:1em;
-  border-radius:100%;
+  margin-right: 1em;
+  border-radius: 100%;
 }
 
 #webmentions ul.reacts a img {
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
 }
 
-/* Kudos */
+/* Kudos Styles */
 
 #kudos {
-   text-align:center;
-   position:relative;
-   margin:2em 0;
+  text-align: center;
+  position: relative;
+  margin: 2em 0;
 }
 
 #kudos button {
   border-radius: 100%;
   margin: auto;
-  padding:0.5em 0.5em 0.3em 0.5em;
+  padding: 0.5em 0.5em 0.3em 0.5em;
   background-color: var(--light-bg);
-  border:2px solid var(--light-primary);
+  border: 2px solid var(--light-primary);
   color: var(--light-bg);
-  transition: all ease-in .25s;
-  cursor:pointer;
+  transition: all ease-in 0.25s;
+  cursor: pointer;
 }
 
-#kudos button:hover {
-  background-color:var(--light-primary)!important;
+#kudos button:hover, #kudos button.activated {
+  background-color: var(--light-primary) !important;
 }
 
-#kudos button:hover .heart > path {
-  stroke: var(--light-bg);   
+#kudos button:hover .heart > path, #kudos button.activated .heart > path {
+  stroke: var(--light-bg);
 }
 
-.heart > path {
+.heart > path  {
   stroke: var(--light-primary);
   stroke-width: 2;
   fill: transparent;
-  transition: fill .25s ease-in;
+  transition: fill 0.25s ease-in;
 }
 
 #kudos .counter {
-   display: block;
-   position: absolute;
-   top: 0%;
-   left: 52%;
-   background-color: var(--light-primary);
-   color: var(--light-bg);
-   border: solid 1px var(--light-bg);
-   font-weight: bold;
-   height: 1.1em;
-   padding: 0.3em;
-   border-radius: 1em;
-   line-height:0.2em;
+  display: block;
+  position: absolute;
+  font-family: system-ui,sans-serif;
+  top: -0.5rem;
+  left: 52%;
+  background-color: var(--light-primary);
+  color: var(--light-bg);
+  border: solid 1px var(--light-bg);
+  font-weight: bold;
+  padding: 0.5em;
+  border-radius: 100%;
+  line-height: 0.8rem;
+  font-size: 0.8rem;
 }
 
-/* Dark Mode */
+/* Dark Mode Styles */
 
-@media (prefers-color-scheme: dark)
-{
-    body {
-        color: var(--dark-primary);
-        background-color: var(--dark-bg);
-    }
+@media (prefers-color-scheme: dark) {
+  body {
+    color: var(--dark-primary);
+    background-color: var(--dark-bg);
+  }
 
-    a:hover {
-      color:var(--dark-links);
-    }
+  a:hover {
+    color: var(--dark-links);
+  }
 
-    nav a.network .icon {
-      fill:var(--dark-links);
-    }
+  nav a.network .icon {
+    fill: var(--dark-links);
+  }
 
-    header h2, header h1 {color:var(--dark-primary);}
+  header h2, header h1 {
+    color: var(--dark-primary);
+  }
 
-    nav a.network .icon {
-      fill: var(--dark-primary);
-    }
+  nav a.network .icon {
+    fill: var(--dark-primary);
+  }
 
-    article h1 {
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
+  article h1 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
 
   #kudos button {
     background-color: var(--dark-bg);
-    border:2px solid var(--dark-primary);
+    border: 2px solid var(--dark-primary);
     color: var(--dark-bg);
   }
 
-  #kudos button:hover {
-    background-color:var(--dark-primary)!important;
+  #kudos button:hover, #kudos button.activated {
+    background-color: var(--dark-primary) !important;
   }
 
-  #kudos button:hover .heart > path {
-    stroke: var(--dark-bg);   
+
+  #kudos button:hover .heart > path, #kudos button.activated .heart > path {
+    stroke: var(--dark-bg);
   }
 
   .heart > path {
@@ -371,8 +374,8 @@ article a.permalink {
   }
 
   #kudos .counter {
-     background-color: var(--dark-primary);
-     color: var(--dark-bg);
-     border: solid 1px var(--dark-bg);
+    background-color: var(--dark-primary);
+    color: var(--dark-bg);
+    border: solid 1px var(--dark-bg);
   }
 }

@@ -15,12 +15,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $BLOG_LINK; ?>assets/img/icon.png"/>   
 
     <!-- WEBMENTIONS ENABLER -->
- <?php if ($WEBMENTIONS === TRUE) {
-		echo '<script src="assets/scripts/webmention.min.js"></script>
-    			<link rel="webmention" href="'.$WEBMENTIONSLINK.'" /> 
-    			<link rel="pingback" href="'.$PINGBACK.'" />';
-		} else {
-	};?>
+<?php if ($WEBMENTIONS === TRUE) {
+echo '<script src="assets/scripts/webmention.min.js"></script>
+<link rel="webmention" href="'.$WEBMENTIONSLINK.'" /> 
+<link rel="pingback" href="'.$PINGBACK.'" />';}?>
 
     <?php include('assets/tools/parsedown.php');?>
     <?php include('assets/tools/ParsedownExtra.php');?>
@@ -77,7 +75,7 @@
   <body>
     <header>
         <h1><?php echo $BLOG_TITLE; ?></h1>
-		    <h2><?php echo $BLOG_TAGLINE;?></h2>
+	<h2><?php echo $BLOG_TAGLINE;?></h2>
     </header>
 
 <main class="home">

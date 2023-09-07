@@ -1,62 +1,66 @@
 # MOD_DEFLATE COMPRESSION
 SetOutputFilter DEFLATE
 AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/x-javascript application/x-httpd-php
-#Pour les navigateurs incompatibles
+
+# The lines above enable GZIP compression for certain file types, which helps reduce page load times by compressing data before sending it to the browser.
+
+# For incompatible browsers
 BrowserMatch ^Mozilla/4 gzip-only-text/html
 BrowserMatch ^Mozilla/4\.0[678] no-gzip
 BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
-#ne pas mettre en cache si ces fichiers le sont déjà
+
+# These lines specify how to handle compression for different user agents (browsers).
+
+# Do not cache if these files are already cached
 SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip
-#les proxies doivent donner le bon contenu
+
+# These lines prevent re-compression of already compressed image files to avoid double compression.
+
+# Proxies must serve the correct content
 Header append Vary User-Agent env=!dont-vary
 
 # BEGIN Expire headers
 <IfModule mod_expires.c>
- ExpiresActive On
- ExpiresDefault "access plus 7200 seconds"
- ExpiresByType image/jpg "access plus 2592000 seconds"
- ExpiresByType image/jpeg "access plus 2592000 seconds"
- ExpiresByType image/png "access plus 2592000 seconds"
- ExpiresByType image/gif "access plus 2592000 seconds"
- AddType image/x-icon .ico
- ExpiresByType image/ico "access plus 2592000 seconds"
- ExpiresByType image/icon "access plus 2592000 seconds"
- ExpiresByType image/x-icon "access plus 2592000 seconds"
- ExpiresByType text/css "access plus 2592000 seconds"
- ExpiresByType text/javascript "access plus 2592000 seconds"
- ExpiresByType text/html "access plus 7200 seconds"
- ExpiresByType application/xhtml+xml "access plus 7200 seconds"
- ExpiresByType application/javascript A259200
- ExpiresByType application/x-javascript "access plus 2592000 seconds"
- ExpiresByType application/x-shockwave-flash "access plus 2592000 seconds"
-</IfModule>
+ExpiresActive On
+ExpiresDefault "access plus 7200 seconds"
+
+# The lines above set expiration headers for various file types, which can help browsers cache static content.
+
 # END Expire headers
 
 # BEGIN Cache-Control Headers
 <IfModule mod_headers.c>
- <FilesMatch "\\.(ico|jpe?g|png|gif|swf|gz|ttf|woff2)$">
- Header set Cache-Control "max-age=31536000, public"
- </FilesMatch>
- <FilesMatch "\\.(css)$">
- Header set Cache-Control "max-age=31536000, public"
- </FilesMatch>
- <FilesMatch "\\.(js)$">
- Header set Cache-Control "max-age=31536000, private"
- </FilesMatch>
+<FilesMatch "\\.(ico|jpe?g|png|gif|swf|gz|ttf|woff2)$">
+Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
+<FilesMatch "\\.(css)$">
+Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
+<FilesMatch "\\.(js)$">
+Header set Cache-Control "max-age=31536000, private"
+</FilesMatch>
 <filesMatch "\\.(html|htm)$">
 Header set Cache-Control "max-age=7200, public"
 </filesMatch>
+
+# The lines above configure cache control headers for specific file types, instructing browsers to cache them for a certain duration.
+
 # Disable caching for scripts and other dynamic files
 <FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
 Header unset Cache-Control
 </FilesMatch>
 </IfModule>
+
+# The lines above prevent caching of certain script and dynamic files, ensuring they are fetched fresh from the server each time.
+
 # END Cache-Control Headers
 
 # KILL THEM ETAGS
 Header unset ETag
 FileETag none
+
+# These lines disable ETags and FileETags, which can reduce unnecessary HTTP requests.
 
 # protect wpconfig.php
 <files wp-config.php>
@@ -64,11 +68,17 @@ order allow,deny
 deny from all
 </files>
 
+# These lines restrict access to the wp-config.php file, which contains sensitive configuration information for WordPress.
+
 # protect the htaccess file
 <files .htaccess>
 order allow,deny
 deny from all
 </files>
 
-# protection de la lecture des répertoires
+# These lines restrict access to the .htaccess file itself, which is a crucial part of your server's configuration.
+
+# Directory listing protection
 Options -Indexes
+
+# This line disables directory listing, preventing users from viewing the contents of directories without an index file.

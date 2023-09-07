@@ -11,7 +11,7 @@
 ?>
 
 <!-- KUDOS SYSTEM -->
-<?php if ($KUDOS === TRUE) {include './kudos.php';;} else {};?>
+<?php if ($KUDOS === TRUE) { include './kudos.php'; } ?>
 
 
 <!-- AUTHOR -->

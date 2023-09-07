@@ -1,11 +1,13 @@
 # Tiny Blog Engine
 
-The Tiny Blog Engine is a lightweight and highly customizable blog engine that empowers you to create and modify your own blogging platform with ease.
+The Tiny Blog Engine is a lightweight and highly customizable blog engine that empowers you to create and modify your own blogging platform with ease. 
+
+It relies on [Markdown](https://www.markdownguide.org/basic-syntax/) files for your posts and pages!
 
 - **Lightweight**: The entire engine is only 230kb in size.
 - **Dark & Light Mode**: Enjoy the convenience of built-in dark and light modes.
 - **Customization**: Easily customize the colors, fonts, language to match your preferences.
-- **Simple Deployment**: Requires only FTP access for deployment (and a server that supports PHP, should be easy to find in 2023)
+- **Simple Deployment**: Requires only FTP access for deployment and posting (and a server that supports PHP, should be easy to find in 2023)
 - **Comments & Interactions**: See [the documentation]([https://github.com/nithou/tiny-blog-engine/blob/main/README.md#comment--interactions](https://github.com/nithou/tiny-blog-engine/wiki/Comments-&-Reactions))
 - **RSS2 Support**: Keeps your readers updated with RSS2 feed compatibility.
 - **GDPR Compliant**: The engine respects your privacy by not relying on external dependencies.

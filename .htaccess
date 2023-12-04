@@ -24,6 +24,7 @@ Header append Vary User-Agent env=!dont-vary
 <IfModule mod_expires.c>
 ExpiresActive On
 ExpiresDefault "access plus 7200 seconds"
+</IfModule>
 
 # The lines above set expiration headers for various file types, which can help browsers cache static content.
 

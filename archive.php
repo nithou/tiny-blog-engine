@@ -16,7 +16,7 @@ foreach ($files as $post) {
     
     if ($SHOW_SUMMARY === TRUE) {
         echo '<h1>' . $title . '</h1>';
-        echo '<div class="p-summary">' . $summary . '</div>';
+        echo '<div class="p-summary">' . $Parsedown->text($summary) . '</div>';
     } else {
         echo '<div class="e-content">' . $Parsedown->text($postContent) . '</div>';
     }

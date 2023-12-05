@@ -23,18 +23,18 @@
     $DARK_LINKS = '#ad6f28'; // Color of the links when hovering for dark mode
 
     // Here you can change how titles & texts look see https://developer.mozilla.org/en-US/docs/Web/CSS/font-family
-    $TITLES = '"Helvetica Neue", "Arial Nova", Helvetica, "Liberation Sans", "Roboto", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Mplus 1p", "Hiragino Sans", "Hiragino Kaku Gothic Pro", "游ゴシック" , "游ゴシック体" , YuGothic , "Yu Gothic", "ＭＳ ゴシック" , "MS Gothic", system-ui, sans-serif'; // Default fonts for the titles
-    $TEXTS = 'Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Mplus 1p", "Hiragino Sans", "Hiragino Kaku Gothic Pro", "游ゴシック" , "游ゴシック体" , YuGothic , "Yu Gothic", "ＭＳ ゴシック" , "MS Gothic", serif'; // Default fonts for the texts
+    $TITLES = 'Karla, "Helvetica Neue", "Arial Nova", Helvetica, "Liberation Sans", "Roboto", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Mplus 1p", "Hiragino Sans", "Hiragino Kaku Gothic Pro", "游ゴシック" , "游ゴシック体" , YuGothic , "Yu Gothic", "ＭＳ ゴシック" , "MS Gothic", system-ui, sans-serif'; // Default fonts for the titles
+    $TEXTS = 'Karla, Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Mplus 1p", "Hiragino Sans", "Hiragino Kaku Gothic Pro", "游ゴシック" , "游ゴシック体" , YuGothic , "Yu Gothic", "ＭＳ ゴシック" , "MS Gothic", serif'; // Default fonts for the texts
 
     // Language 
     $LANG = 'en'; // Two code language of your blog lang
-    $LINKTO = 'direct link'; // Displayed at the bottom of the posts
-    $BACKTO = 'back to the list'; // Displayed when on a post or page 
-    $HOME = 'home'; // Back to the home
-    $MOREPOSTS = 'see all posts';  // Text that links to the archive page
+    $LINKTO = 'Permalink'; // Displayed at the bottom of the posts
+    $BACKTO = 'Back'; // Displayed when on a post or page 
+    $HOME = 'Home'; // Back to the home
+    $MOREPOSTS = 'View all posts';  // Text that links to the archive page
 
     // Homepage display
-    $SHOW_SUMMARY = false; // Change to true if you want to only display a short summary in home
+    $SHOW_SUMMARY = true; // Change to true if you want to only display a short summary in home
     $POST_LIMIT = 10; // Limit the amount of posts you want to display on the homepage
 
     // Comments & Reactions systems

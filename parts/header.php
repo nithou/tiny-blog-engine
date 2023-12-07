@@ -80,6 +80,7 @@ $themeVars = [
     </style>
     <link rel="stylesheet" href="<?php echo $BLOG_LINK; ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo $BLOG_LINK; ?>assets/css/custom.css">
+    <link rel="alternate" type="application/rss+xml" href="/rss.php" />
     <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.5.0/styles/default.min.css">
 	<script src="//unpkg.com/@highlightjs/cdn-assets@11.5.0/highlight.min.js"></script>
 	<script>

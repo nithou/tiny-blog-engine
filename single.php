@@ -7,11 +7,13 @@
     ?>
     <article class="h-entry">
         <div class="e-content"><?php echo $Parsedown->text($html); ?></div>
-        &#8249; <a href="<?php echo $BLOG_LINK; ?>"><?php echo $BACKTO; ?></a>
+        &larr; <a href="<?php echo $BLOG_LINK; ?>"><?php echo $BACKTO; ?></a>
     </article>
 
     <!-- KUDOS SYSTEM -->
-    <?php if ($KUDOS === TRUE) { include './kudos.php'; } ?>
+    <?php if ($KUDOS === TRUE) {
+        include './kudos.php';
+    } ?>
 
     <!-- AUTHOR -->
     <hr>
@@ -24,7 +26,7 @@
     </div>
 
     <!-- FULL BRID.GY FOR WEBMENTIONS SUPPORT -->
-    <?php if ($WEBMENTIONS === TRUE): ?>
+    <?php if ($WEBMENTIONS === TRUE) : ?>
         <a href="https://brid.gy/publish/flickr" rel="webmention"></a>
         <a href="https://brid.gy/publish/github" rel="webmention"></a>
         <a href="https://brid.gy/publish/mastodon" rel="webmention"></a>
@@ -35,7 +37,7 @@
     <!-- EOF BRID.GY -->
 
     <!-- ADD COMMENTO SUPPORT -->
-    <?php if ($COMMENTO === TRUE): ?>
+    <?php if ($COMMENTO === TRUE) : ?>
         <script defer src="<?php echo $COMMENTO_URL; ?>" data-css-override="./assets/css/commento.css"></script>
         <div id="commento"></div>
     <?php endif; ?>

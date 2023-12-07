@@ -92,6 +92,7 @@ main {
 .h-entry img, .h-entry iframe, .h-entry table, .h-entry object, .h-entry code, .h-entry pre {
   max-width: 100%;
   display: block;
+  border-radius: 5px;
 }
 
 .h-entry pre, .h-entry code {

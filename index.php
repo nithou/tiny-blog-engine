@@ -20,7 +20,7 @@
           if ($SHOW_SUMMARY === TRUE) {
             echo '<article class="h-entry">';
             echo '<h1 class="p-name">'.$title.'</h1>';
-            echo '<div class="p-summary">'.$summary.'</div>';
+            echo '<div class="p-summary">'.$Parsedown->text($summary).'</div>';
             echo '<a href="single.php?id='.$link_id.'" class="permalink u-url">'.$LINKTO.'</a>';
             echo '</article>';
             $counter++;

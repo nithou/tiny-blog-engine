@@ -29,21 +29,22 @@ foreach ($files as $postFile) {
     $postContent = file_get_contents($postFile);
     $Parsedown = new Parsedown();
     $newItem = $TestFeed->createNewItem();
-    
-    $itemDate = $link_id;
+
+    $itemDate = substr($link_id, 0, strpos($link_id, "_"));
+    //$itemDate = $link_id;
     $title = substr($postContent, 2, strpos($postContent, "\n") - 2);
     $itemDateClean = str_replace('"', '', str_replace("'", "", $itemDate));
     $pubdate = strtotime($itemDateClean);
     $content = stristr($postContent, "<p>");
     $contentFinal =  $Parsedown->text($postContent);
-    
+
     $newItem->setTitle($title)
         ->setLink($BLOG_LINK . 'single.php?id=' . $itemDateClean)
         ->setID($BLOG_LINK . 'single.php?id=' . $itemDateClean)
         ->setDate($pubdate)
         ->setDescription($contentFinal)
         ->setAuthor($BLOG_AUTHOR, $AUTHOR_EMAIL);
-    
+
     $TestFeed->addItem($newItem);
 }
 

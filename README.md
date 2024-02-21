@@ -11,6 +11,7 @@ It relies on [Markdown](https://www.markdownguide.org/basic-syntax/) files for y
 - **Comments & Interactions**: See [the documentation]([https://github.com/nithou/tiny-blog-engine/blob/main/README.md#comment--interactions](https://github.com/nithou/tiny-blog-engine/wiki/Comments-&-Reactions))
 - **RSS2 Support**: Keeps your readers updated with RSS2 feed compatibility.
 - **GDPR Compliant**: The engine respects your privacy by not relying on external dependencies.
+- **Blocks AI crawlers**: By default the blog system forbids AI to use your content (for the [polite robots](https://darkvisitors.com/robots-txt-builder))
 
 All the informations are [available on the Wiki](https://github.com/nithou/tiny-blog-engine/wiki)!
 

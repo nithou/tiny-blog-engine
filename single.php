@@ -15,7 +15,7 @@
         <div class="e-content"><?php echo $Parsedown->text($frontmatter->fetchContent()); ?>
             <?php if (!empty($meta['img'])) {echo '<img src="'.$meta['img'].'" style="max-width:100%" />';}; ?>
         </div>
-        &larr; <a href="<?php echo $BLOG_LINK; ?>"><?php echo $BACKTO; ?></a>
+        <a href="<?php echo $BLOG_LINK; ?>" class="permalink">&larr; <?php echo $BACKTO; ?></a>
     </article>
 
     <!-- KUDOS SYSTEM -->

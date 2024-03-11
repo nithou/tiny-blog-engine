@@ -38,6 +38,7 @@ $themeVars = [
     
     <?php function getTitleAndSummary($filePath) {
         $frontmatter = new FrontMatter($filePath);
+        $meta = [];
         $content = file_get_contents($filePath);
         $lines = explode("\n", $frontmatter->fetchContent());  // Change here
         
@@ -56,31 +57,44 @@ $themeVars = [
 
         $title = $BLOG_TITLE;
         $description = $BLOG_DESCRIPTION;
+        $img = $BLOG_LINK.'assets/img/og.png';
 
         if (stripos($_SERVER['REQUEST_URI'], 'single.php')) {
             $id = $_GET['id'];
             $path = 'posts/' . $id . '.md';
             if (file_exists($path)) {
                 $data = getTitleAndSummary($path);
+                $frontmatter = new FrontMatter($path);
+                foreach ($frontmatter->fetchMeta() as $key => $value) {
+                    $meta[$key] = $value;
+                }
                 $title = $BLOG_TITLE . ' | ' . $data['title'];
                 $description = $data['summary'];
+                if (!empty($meta['img'])) {$img = $meta['img'];};
             }
         } elseif (stripos($_SERVER['REQUEST_URI'], 'page.php')) {
             $id = $_GET['id'];
             $path = 'pages/' . $id . '.md';
             if (file_exists($path)) {
                 $data = getTitleAndSummary($path);
+                $frontmatter = new FrontMatter($path);
+                foreach ($frontmatter->fetchMeta() as $key => $value) {
+                    $meta[$key] = $value;
+                }
                 $title = $BLOG_TITLE . ' | ' . $data['title'];
                 $description = $data['summary'];
+                if (!empty($meta['img'])) {$img = $meta['img'];};
             }
         }
     ;?>
 
+    <!-- PAGE METAS -->
     <title><?php echo $title; ?></title>
-    <meta name="description" content="<?php echo $description; ?>"/>
     <meta property="og:title" content="<?php echo $title; ?>"/>
+    <meta name="description" content="<?php echo $description; ?>"/>
     <meta property="og:description" content="<?php echo $description; ?>"/>
-    <meta property="og:image" content="<?php echo $BLOG_LINK; ?>assets/img/og.png"/>
+    <meta property="og:image" content="<?php echo $img; ?>"/>
+    <!-- EOF PAGE METAS -->
     
     <link rel="stylesheet" href="<?php echo $BLOG_LINK; ?>assets/css/normalize.min.css">
     <style>

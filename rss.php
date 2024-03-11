@@ -4,6 +4,7 @@ require './assets/tools/feedwriter/Feed.php';
 require './assets/tools/feedwriter/RSS2.php';
 require './assets/tools/feedwriter/simple_html_dom.php';
 require './assets/tools/parsedown.php';
+require './assets/tools/FrontMatter.php';
 require './config.php';
 
 date_default_timezone_set('UTC');
@@ -26,10 +27,10 @@ rsort($files);
 
 foreach ($files as $postFile) {
     $link_id = pathinfo($postFile, PATHINFO_FILENAME);
-    $postContent = file_get_contents($postFile);
+    $frontmatter = new FrontMatter($postFile);
+    $postContent = $frontmatter->fetchContent($postFile);
     $Parsedown = new Parsedown();
     $newItem = $TestFeed->createNewItem();
-
     $itemDate = substr($link_id, 0, strpos($link_id, "_"));
     $itemDate = $link_id;
     $title = substr($postContent, 2, strpos($postContent, "\n") - 2);

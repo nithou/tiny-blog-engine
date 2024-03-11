@@ -3,10 +3,18 @@
 <section class="single">
     <?php
     $html = file_get_contents('posts/' . $id . '.md');
+    $frontmatter = new FrontMatter('posts/' . $id . '.md');
+    $meta = [];
     $Parsedown = new ParsedownExtra();
+
+    foreach ($frontmatter->fetchMeta() as $key => $value) {
+             $meta[$key] = $value;
+          }
     ?>
     <article class="h-entry">
-        <div class="e-content"><?php echo $Parsedown->text($html); ?></div>
+        <div class="e-content"><?php echo $Parsedown->text($frontmatter->fetchContent()); ?>
+            <?php if (!empty($meta['img'])) {echo '<img src="'.$meta['img'].'" style="max-width:100%" />';}; ?>
+        </div>
         &larr; <a href="<?php echo $BLOG_LINK; ?>"><?php echo $BACKTO; ?></a>
     </article>
 

@@ -1,35 +1,6 @@
 <?php
 include('config.php');
 
-function getTitleAndSummary($filePath) {
-    $content = file_get_contents($filePath);
-    $lines = explode("\n", $content);
-    $title = substr($lines[0], 2); // Extract the title (assuming it starts with "## ")
-    $summary = implode("\n", array_slice($lines, 1, 2)); // Extract the first two lines as summary
-    return ['title' => $title, 'summary' => $summary];
-}
-
-$title = $BLOG_TITLE;
-$description = $BLOG_DESCRIPTION;
-
-if (stripos($_SERVER['REQUEST_URI'], 'single.php')) {
-    $id = $_GET['id'];
-    $path = 'posts/' . $id . '.md';
-    if (file_exists($path)) {
-        $data = getTitleAndSummary($path);
-        $title = $BLOG_TITLE . ' | ' . $data['title'];
-        $description = $data['summary'];
-    }
-} elseif (stripos($_SERVER['REQUEST_URI'], 'page.php')) {
-    $id = $_GET['id'];
-    $path = 'pages/' . $id . '.md';
-    if (file_exists($path)) {
-        $data = getTitleAndSummary($path);
-        $title = $BLOG_TITLE . ' | ' . $data['title'];
-        $description = $data['summary'];
-    }
-}
-
 $themeVars = [
     '--light-bg' => $LIGHT_BACKGROUND,
     '--light-primary' => $LIGHT_TEXT,
@@ -50,7 +21,6 @@ $themeVars = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="robots" content="noai, noimageai">
     <meta property="og:locale" content="en_GB"/>
-    <meta property="og:image" content="<?php echo $BLOG_LINK; ?>assets/img/og.png"/>
     <meta name="author" content="<?php echo $BLOG_AUTHOR; ?>">
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $BLOG_LINK; ?>assets/img/icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $BLOG_LINK; ?>assets/img/icon.png"/>
@@ -64,11 +34,53 @@ $themeVars = [
 
     <?php include('assets/tools/parsedown.php'); ?>
     <?php include('assets/tools/ParsedownExtra.php'); ?>
+    <?php include('assets/tools/FrontMatter.php'); ?>
     
+    <?php function getTitleAndSummary($filePath) {
+        $frontmatter = new FrontMatter($filePath);
+        $content = file_get_contents($filePath);
+        $lines = explode("\n", $frontmatter->fetchContent());  // Change here
+        
+        foreach ($lines as $line) {
+          // Check if the line starts with #
+          if (strpos($line, '# ') === 0) {
+              // Extract the title and remove # and any leading/trailing whitespaces
+              $title = trim(substr($line, 2));
+              break; // Stop searching after finding the first heading
+          }
+        }
+
+        $summary = implode("\n", array_slice($lines, 1, 2)); // Extract the first two lines as summary
+            return ['title' => $title, 'summary' => $summary];
+        }
+
+        $title = $BLOG_TITLE;
+        $description = $BLOG_DESCRIPTION;
+
+        if (stripos($_SERVER['REQUEST_URI'], 'single.php')) {
+            $id = $_GET['id'];
+            $path = 'posts/' . $id . '.md';
+            if (file_exists($path)) {
+                $data = getTitleAndSummary($path);
+                $title = $BLOG_TITLE . ' | ' . $data['title'];
+                $description = $data['summary'];
+            }
+        } elseif (stripos($_SERVER['REQUEST_URI'], 'page.php')) {
+            $id = $_GET['id'];
+            $path = 'pages/' . $id . '.md';
+            if (file_exists($path)) {
+                $data = getTitleAndSummary($path);
+                $title = $BLOG_TITLE . ' | ' . $data['title'];
+                $description = $data['summary'];
+            }
+        }
+    ;?>
+
     <title><?php echo $title; ?></title>
     <meta name="description" content="<?php echo $description; ?>"/>
     <meta property="og:title" content="<?php echo $title; ?>"/>
     <meta property="og:description" content="<?php echo $description; ?>"/>
+    <meta property="og:image" content="<?php echo $BLOG_LINK; ?>assets/img/og.png"/>
     
     <link rel="stylesheet" href="<?php echo $BLOG_LINK; ?>assets/css/normalize.min.css">
     <style>

@@ -31,7 +31,7 @@ foreach ($files as $postFile) {
     $newItem = $TestFeed->createNewItem();
 
     $itemDate = substr($link_id, 0, strpos($link_id, "_"));
-    //$itemDate = $link_id;
+    $itemDate = $link_id;
     $title = substr($postContent, 2, strpos($postContent, "\n") - 2);
     $itemDateClean = str_replace('"', '', str_replace("'", "", $itemDate));
     $pubdate = strtotime($itemDateClean);

@@ -1,11 +1,20 @@
 # Disallow AI Agents
 User-agent: anthropic-ai
+User-agent: AmazonBot
+User-agent: Applebot-Extended
 User-agent: Bytespider
 User-agent: CCBot
 User-agent: ChatGPT-User
+User-agent: Claudebot
+User-agent: Claude-Web
 User-agent: cohere-ai
-User-Agent: FacebookBot
+User-agent: Diffbot
+User-agent: FacebookBot
 User-agent: Google-Extended
 User-agent: GPTBot
+User-agent: Omgili
 User-agent: Omgilibot
+User-agent: PerplexityBot
+User-agent: YandexAdditionalBot
+User-agent: YouBot
 Disallow: /

@@ -65,5 +65,5 @@ FileETag none
 
 # Forbid AI Crawlers
 RewriteEngine On
-RewriteCond %{HTTP_USER_AGENT} (anthropic-ai|AmazonBot|Applebot-Extended|Bytespider|CCBot|ChatGpt-User|Claudebot|Claude-Web|cohere-ai|Diffbot|FacebookBot|Google-Extended|GPTBot|Omgili|Omgilibot|PerplexityBot|YouBot) [NC]
+RewriteCond %{HTTP_USER_AGENT} (anthropic-ai|AmazonBot|Applebot-Extended|Bytespider|CCBot|ChatGpt-User|Claudebot|Claude-Web|cohere-ai|Diffbot|FacebookBot|Google-Extended|GPTBot|Omgili|Omgilibot|PerplexityBot|YandexAdditionalBot|YouBot) [NC]
 RewriteRule ^ – [F]

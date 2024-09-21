@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 include('config.php');
 
@@ -12,8 +13,6 @@ $themeVars = [
     '--texts-font' => $TEXTS,
 ];
 ?>
-
-<!DOCTYPE html>
 <html lang="<?php echo $LANG; ?>">
 <head>
     <meta charset="UTF-8"/>
@@ -36,63 +35,51 @@ $themeVars = [
     <?php include('assets/tools/ParsedownExtra.php'); ?>
     <?php include('assets/tools/FrontMatter.php'); ?>
     
-    <?php function getTitleAndSummary($filePath) {
-        $frontmatter = new FrontMatter($filePath);
-        $meta = [];
-        $content = file_get_contents($filePath);
-        $lines = explode("\n", $frontmatter->fetchContent());  // Change here
-        
-        foreach ($lines as $line) {
-          // Check if the line starts with #
-          if (strpos($line, '# ') === 0) {
-              // Extract the title and remove # and any leading/trailing whitespaces
-              $title = trim(substr($line, 2));
-              break; // Stop searching after finding the first heading
-          }
-        }
-
-        $summary = implode("\n", array_slice($lines, 1, 2)); // Extract the first two lines as summary
-            return ['title' => $title, 'summary' => $summary];
-        }
+    <?php
+        $Parsedown = new ParsedownExtra();
 
         $title = $BLOG_TITLE;
-        $description = $BLOG_DESCRIPTION;
-        $img = $BLOG_LINK.'assets/img/og.png';
+        $titleHeader = $BLOG_TITLE;
+        $summary = $BLOG_DESCRIPTION;
+        $img = $BLOG_LINK . 'assets/img/og.png';
 
-        if (stripos($_SERVER['REQUEST_URI'], 'single.php')) {
-            $id = $_GET['id'];
-            $path = 'posts/' . $id . '.md';
-            if (file_exists($path)) {
-                $data = getTitleAndSummary($path);
-                $frontmatter = new FrontMatter($path);
-                foreach ($frontmatter->fetchMeta() as $key => $value) {
-                    $meta[$key] = $value;
-                }
-                $title = $BLOG_TITLE . ' | ' . $data['title'];
-                $description = $data['summary'];
-                if (!empty($meta['img'])) {$img = $meta['img'];};
-            }
-        } elseif (stripos($_SERVER['REQUEST_URI'], 'page.php')) {
-            $id = $_GET['id'];
-            $path = 'pages/' . $id . '.md';
-            if (file_exists($path)) {
-                $data = getTitleAndSummary($path);
-                $frontmatter = new FrontMatter($path);
-                foreach ($frontmatter->fetchMeta() as $key => $value) {
-                    $meta[$key] = $value;
-                }
-                $title = $BLOG_TITLE . ' | ' . $data['title'];
-                $description = $data['summary'];
-                if (!empty($meta['img'])) {$img = $meta['img'];};
-            }
+        // Function to handle meta, content, and summary extraction
+        function processFrontMatter($type, $id, $Parsedown, $BLOG_TITLE, $BLOG_LINK) {
+            $path = $type . '/' . $id . '.md';
+            $frontmatter = new FrontMatter($path);
+
+            // Fetch meta data
+            $meta = $frontmatter->fetchMeta();
+            $title = $meta['title'];
+            $titleHeader = $meta['title'] . " | " . $BLOG_TITLE;
+            
+            // Parse content using Parsedown
+            $content = $Parsedown->text($frontmatter->fetchContent());
+
+            // Create summary from the first line
+            $summary = implode(".", array_slice(explode(".", $frontmatter->fetchContent()), 0, 1)) . "...";
+
+            // Set image if available, fallback to default
+            $img = !empty($meta['img']) ? $meta['img'] : $BLOG_LINK . 'assets/img/og.png';
+
+            return compact('title', 'titleHeader', 'content', 'summary', 'img');
         }
-    ;?>
+
+        // Determine if it's a post or page
+        if (stripos($_SERVER['REQUEST_URI'], 'single.php') !== false) {
+            $id = $_GET['id'];
+            extract(processFrontMatter('posts', $id, $Parsedown, $BLOG_TITLE, $BLOG_LINK));
+        } elseif (stripos($_SERVER['REQUEST_URI'], 'page.php') !== false) {
+            $id = $_GET['id'];
+            extract(processFrontMatter('pages', $id, $Parsedown, $BLOG_TITLE, $BLOG_LINK));
+        }
+    ?>
 
     <!-- PAGE METAS -->
-    <title><?php echo $title; ?></title>
-    <meta property="og:title" content="<?php echo $title; ?>"/>
-    <meta name="description" content="<?php echo $description; ?>"/>
-    <meta property="og:description" content="<?php echo $description; ?>"/>
+    <title><?php echo $titleHeader; ?></title>
+    <meta property="og:title" content="<?php echo $titleHeader ?>"/>
+    <meta name="description" content="<?php echo $summary; ?>"/>
+    <meta property="og:description" content="<?php echo $summary; ?>"/>
     <meta property="og:image" content="<?php echo $img; ?>"/>
     <!-- EOF PAGE METAS -->
     

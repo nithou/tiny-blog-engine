@@ -1,19 +1,20 @@
 <?php include 'parts/header.php'; ?>
 
 <section class="single">
-    <?php
-    $html = file_get_contents('posts/' . $id . '.md');
-    $frontmatter = new FrontMatter('posts/' . $id . '.md');
-    $meta = [];
-    $Parsedown = new ParsedownExtra();
-
-    foreach ($frontmatter->fetchMeta() as $key => $value) {
-             $meta[$key] = $value;
-          }
-    ?>
     <article class="h-entry">
-        <div class="e-content"><?php echo $Parsedown->text($frontmatter->fetchContent()); ?>
-            <?php if (!empty($meta['img'])) {echo '<img src="'.$meta['img'].'" style="max-width:100%" />';}; ?>
+        <h1><?php echo $title ?></h1>
+        <div class="e-content">
+             <?php echo $content; ?>
+
+            <?php
+            $defaultImg = $BLOG_LINK . 'assets/img/og.png';  // Define the default image URL
+
+            // Only display the image if it's not the default one
+            if (!empty($img) && $img !== $defaultImg) {
+                echo '<img src="' . htmlspecialchars($img) . '" style="max-width:100%" alt="Image" />';
+            }
+            ?>
+
         </div>
         <a href="<?php echo $BLOG_LINK; ?>" class="permalink">&larr; <?php echo $BACKTO; ?></a>
     </article>

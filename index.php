@@ -1,4 +1,5 @@
 <?php include 'parts/header.php';?>
+
 <section class="list h-feed"> <!-- article list -->
 
       <?php
@@ -19,17 +20,6 @@
              $meta[$key] = $value;
           }
 
-          // Get the title
-          $lines = explode("\n", $frontmatter->fetchContent());  // Change here
-          foreach ($lines as $line) {
-              // Check if the line starts with #
-              if (strpos($line, '# ') === 0) {
-                  // Extract the title and remove # and any leading/trailing whitespaces
-                  $title = trim(substr($line, 2));
-                  break; // Stop searching after finding the first heading
-              }
-          }
-
           // Get content & summary
           $content= $frontmatter->fetchContent();
           $summary = substr($content, 1, 180); 
@@ -40,17 +30,17 @@
 
           if ($SHOW_SUMMARY === TRUE) {
             echo '<article class="h-entry">';
-            //echo '<h1 class="p-name">'.$Parsedown->text($title).'</h1>';
+            echo '<h1 class="p-name">'.$meta['title'].'</h1>';
             echo '<div class="p-summary">'.$Parsedown->text($summary).'</div>';
-            echo '<a href="single.php?id='.$link_id.'" class="permalink u-url">'.$LINKTO.'</a>';
+            echo '<a href="single.php?id='.$link_id.'" class="permalink u-url">'.$LINKTO.' &rarr;</a>';
             echo '</article>';
             $counter++;
           } else {
             echo '<article class="h-entry">';
-            //echo '<h1 class="p-name">'.$Parsedown->text($title).'</h1>';
+            echo '<h1 class="p-name">'.$meta['title'].'</h1>';
             echo '<div class="e-content">'.$Parsedown->text($frontmatter->fetchContent()).'</div>';
             if (!empty($meta['img'])) {echo '<img src="'.$meta['img'].'" style="max-width:100%" />';};
-            echo '<a href="single.php?id='.$link_id.'" class="permalink u-url">'.$LINKTO.'</a>';
+            echo '<a href="single.php?id='.$link_id.'" class="permalink u-url">'.$LINKTO.' &rarr;</a>';
             echo '</article>';
             $counter++;
           };

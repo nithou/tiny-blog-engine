@@ -33,7 +33,8 @@ foreach ($files as $postFile) {
     $newItem = $TestFeed->createNewItem();
     $itemDate = substr($link_id, 0, strpos($link_id, "_"));
     $itemDate = $link_id;
-    $title = $frontmatter->fetchMeta($title);
+    $meta = $frontmatter->fetchMeta();
+    $title = $meta['title'];
     $itemDateClean = str_replace('"', '', str_replace("'", "", $itemDate));
     $pubdate = strtotime($itemDateClean);
     $content = stristr($postContent, "<p>");

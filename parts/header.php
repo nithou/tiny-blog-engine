@@ -51,6 +51,7 @@ $themeVars = [
             // Fetch meta data
             $meta = $frontmatter->fetchMeta();
             $title = $meta['title'];
+            $pubDate = $meta['published_date'];
             $titleHeader = $meta['title'] . " | " . $BLOG_TITLE;
             
             // Parse content using Parsedown
@@ -62,7 +63,7 @@ $themeVars = [
             // Set image if available, fallback to default
             $img = !empty($meta['img']) ? $meta['img'] : $BLOG_LINK . 'assets/img/og.png';
 
-            return compact('title', 'titleHeader', 'content', 'summary', 'img');
+            return compact('title', 'titleHeader', 'pubDate', 'content', 'summary', 'img');
         }
 
         // Determine if it's a post or page

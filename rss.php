@@ -13,7 +13,8 @@ use \FeedWriter\RSS2;
 
 $TestFeed = new RSS2;
 
-$TestFeed->setTitle($BLOG_TITLE)
+$TestFeed
+    ->setTitle($BLOG_TITLE)
     ->setLink($BLOG_LINK)
     ->setDescription($BLOG_DESCRIPTION)
     ->setChannelElement('language', $LANG)
@@ -31,19 +32,17 @@ foreach ($files as $postFile) {
     $postContent = $frontmatter->fetchContent($postFile);
     $Parsedown = new Parsedown();
     $newItem = $TestFeed->createNewItem();
-    $itemDate = substr($link_id, 0, strpos($link_id, "_"));
-    $itemDate = $link_id;
+    $itemDate = filemtime($postFile);
     $meta = $frontmatter->fetchMeta();
     $title = $meta['title'];
-    $itemDateClean = str_replace('"', '', str_replace("'", "", $itemDate));
-    $pubdate = strtotime($itemDateClean);
     $content = stristr($postContent, "<p>");
     $contentFinal =  $Parsedown->text($postContent);
 
-    $newItem->setTitle($title)
-        ->setLink($BLOG_LINK . 'single.php?id=' . $itemDateClean)
-        ->setID($BLOG_LINK . 'single.php?id=' . $itemDateClean)
-        ->setDate($pubdate)
+    $newItem
+        ->setTitle($title)
+        ->setLink($BLOG_LINK . 'single.php?id=' . $link_id)
+        ->setID($BLOG_LINK . 'single.php?id=' . $link_id)
+        ->setDate($itemDate)
         ->setDescription($contentFinal)
         ->setAuthor($BLOG_AUTHOR, $AUTHOR_EMAIL);
 

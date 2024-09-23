@@ -32,9 +32,9 @@ foreach ($files as $postFile) {
     $postContent = $frontmatter->fetchContent($postFile);
     $Parsedown = new Parsedown();
     $newItem = $TestFeed->createNewItem();
-    $itemDate = filemtime($postFile);
     $meta = $frontmatter->fetchMeta();
     $title = $meta['title'];
+    $itemDate = !empty($meta['published_date']) ? $meta['published_date'] : filemtime($postFile);
     $content = stristr($postContent, "<p>");
     $contentFinal =  $Parsedown->text($postContent);
 

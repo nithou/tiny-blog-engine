@@ -57,8 +57,13 @@ $themeVars = [
             // Parse content using Parsedown
             $content = $Parsedown->text($frontmatter->fetchContent());
 
-            // Create summary from the first line
-            $summary = implode(".", array_slice(explode(".", $frontmatter->fetchContent()), 0, 1)) . "...";
+            // Get description from the metas or fall back to the first line
+            if (!empty($meta['description'])) {
+                $summary = $meta['description'];
+            } else {
+                // Fallback to the file's last modification time
+                $summary = implode(".", array_slice(explode(".", $frontmatter->fetchContent()), 0, 1)) . "...";
+            }
 
             // Set image if available, fallback to default
             $img = !empty($meta['img']) ? $meta['img'] : $BLOG_LINK . 'assets/img/og.png';

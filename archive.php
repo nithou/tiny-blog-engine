@@ -14,10 +14,19 @@
           $frontmatter = new FrontMatter($post);
           $meta = [];
           $title = [];
+          $type = [];
 
           // Get metakeys
           foreach ($frontmatter->fetchMeta() as $key => $value) {
              $meta[$key] = $value;
+          }
+
+          // Get post type
+          if (!empty($meta['type'])) {
+              $type = $meta['type'];
+          } else {
+              // Fallback to the file's last modification time
+              $type = "single";
           }
 
           // Get content & summary
@@ -33,7 +42,7 @@
             echo '</article>';
             $counter++;
           } else {
-            echo '<article class="h-entry">';
+            echo '<article class="h-entry '.$type.'">';
             echo '<h1 class="p-name">'.$meta['title'].'</h1>';
             echo '<div class="e-content">'.$Parsedown->text($frontmatter->fetchContent()).'</div>';
             if (!empty($meta['img'])) {echo '<img src="'.$meta['img'].'" style="max-width:100%" />';};

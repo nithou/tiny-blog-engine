@@ -65,6 +65,15 @@ $themeVars = [
                 $summary = implode(".", array_slice(explode(".", $frontmatter->fetchContent()), 0, 1)) . "...";
             }
 
+            
+            // Get post type
+            if (!empty($meta['type'])) {
+                $summary = $meta['type'];
+            } else {
+                // Fallback to the file's last modification time
+                $summary = "single";
+            }
+
             // Set image if available, fallback to default
             $img = !empty($meta['img']) ? $meta['img'] : $BLOG_LINK . 'assets/img/og.png';
 

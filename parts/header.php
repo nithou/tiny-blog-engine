@@ -68,10 +68,10 @@ $themeVars = [
             
             // Get post type
             if (!empty($meta['type'])) {
-                $summary = $meta['type'];
+                $type = $meta['type'];
             } else {
                 // Fallback to the file's last modification time
-                $summary = "single";
+                $type = "single";
             }
 
             // Set image if available, fallback to default

@@ -142,7 +142,7 @@ hr {
   margin-top: 0;
 }
 
-.about-me .author-image:after {
+.about-me .author-image::after {
   content: "";
   display: table;
   clear: both;

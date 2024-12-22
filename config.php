@@ -6,7 +6,7 @@
 
     // Mainly used for RSS
     $BLOG_AUTHOR = 'your name'; // Your name or nickname
-    $FEDIVERSE_AUTHOR = '@pseudo@server.com'; // Your full Fediverse identifier (for meta tags)
+    $FEDIVERSE_CREATOR = '@pseudo@server.com'; // Your full Fediverse identifier (for meta tags)
     $AUTHOR_EMAIL = 'your email'; // Your email
     $AUTHOR_DESCRIPTION = 'your description'; // Will be displayed at the bottom of the post. Upload an author.jpg into the /assets/img folder
 

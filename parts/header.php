@@ -20,10 +20,12 @@ $themeVars = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="robots" content="noai, noimageai">
     <meta property="og:locale" content="en_GB"/>
-    <meta name="author" content="<?php echo $BLOG_AUTHOR; ?>">
+    <?php if (!empty($FEDIVERSE_AUTHOR)): ?><meta name="author" content="<?php echo $FEDIVERSE_AUTHOR; ?>"><?php endif; ?>
+    <meta name="fediverse:creator" content="@Gargron@mastodon.social" />
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $BLOG_LINK; ?>assets/img/icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $BLOG_LINK; ?>assets/img/icon.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $BLOG_LINK; ?>assets/img/icon.png"/>
+
     
     <?php if ($WEBMENTIONS === TRUE): ?>
         <script src="assets/scripts/webmention.min.js"></script>

@@ -45,6 +45,7 @@ abstract class Feed
     /**
     * Collection of all channel elements
     */
+    private $encoding;
     private $channels      = array();
 
     /**

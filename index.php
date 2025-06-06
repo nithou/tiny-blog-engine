@@ -25,8 +25,8 @@
           if (!empty($meta['type'])) {
               $type = $meta['type'];
           } else {
-              // Fallback to the file's last modification time
-              $type = "single";
+                // Default to single type when not specified.
+                $type = "single";
           }
 
           // Get content & summary

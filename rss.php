@@ -29,7 +29,7 @@ rsort($files);
 foreach ($files as $postFile) {
     $link_id = pathinfo($postFile, PATHINFO_FILENAME);
     $frontmatter = new FrontMatter($postFile);
-    $postContent = $frontmatter->fetchContent($postFile);
+    $postContent = $frontmatter->fetchContent();
     $Parsedown = new Parsedown();
     $newItem = $TestFeed->createNewItem();
     $meta = $frontmatter->fetchMeta();
